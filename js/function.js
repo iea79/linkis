@@ -70,7 +70,29 @@ $(document).ready(function() {
     //     });
     // });
    	// setGridMatch($('[data-grid-match] .grid__item'));
-   	gridMatch();
+   	// gridMatch();
+
+   	$('select').select2({
+   		minimumResultsForSearch: 10,
+   	});
+
+   	$('.filter__top_toggle').on('click', function(event) {
+   		event.preventDefault();
+   		$(this).toggleClass('open');
+   		$('.filter__content').slideToggle(300);
+   	});
+
+   	$('.filter__bottom_toggle').on('click', function(event) {
+   		event.preventDefault();
+   		$(this).toggleClass('open');
+   		$('.filter__bottom_more').slideToggle(300);
+   		if ($(this).hasClass('open')) {
+   			$(this).html('Скрыть <span class="icon icon__drop"></span>')
+   		} else {
+   			$(this).html('Больше фильтров <span class="icon icon__drop"></span>')
+   		}
+   	});
+
 });
 
 $(window).resize(function(event) {
@@ -79,7 +101,7 @@ $(window).resize(function(event) {
 
 function checkOnResize() {
    	// setGridMatch($('[data-grid-match] .grid__item'));
-   	gridMatch();
+   	// gridMatch();
 }
 
 function gridMatch() {

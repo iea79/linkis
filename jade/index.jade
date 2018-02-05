@@ -1,0 +1,160 @@
+extends template.jade
+
+block breadcrumb
+	
+block titlepage 
+	|Проекты
+block content
+	.filter
+		.filter__top
+			.filter__top_toggle Фильтры
+				span.icon.icon__drop
+		.filter__content
+			// begin grid_filter__grid
+			.grid.filter__grid
+				div
+					.filter__search
+						input(type="text" placeholder="Поиск по названию")
+						.icon.icon__search
+				div
+					select(name="")
+						option(value="") Любой тип
+						option(value="") item2
+						option(value="") item3
+
+				div
+					select(name="")
+						option(value="") Все клиенты
+						option(value="") Вымпелком
+						option(value="") Сбербанк
+						option(value="") Экопси консалтинг
+						option(value="") Tele 2
+
+				div
+					select(name="")
+						option(value="") Все мненджеры 1
+						option(value="") Все мненджеры 2
+						option(value="") Все мненджеры 3
+
+			// end grid_filter__grid
+			
+			.filter__bottom
+				.filter__bottom_toggle Больше фильтров
+					span.icon.icon__drop
+				.filter__bottom_wrap
+					.filter__bottom_more
+						// begin filter__bottom_grid
+						.grid.filter__bottom_grid
+							div
+								.form__check
+									input(type="checkbox")
+								label.form__label Искать в архивах
+							div
+								label.form__label Добавлен
+								.form__date
+									input(type="datetime" placeholder="ДД.ММ.ГГГГ")
+							div
+								label.form__label Последнее действие
+								.form__date
+									input(type="datetime" placeholder="ДД.ММ.ГГГГ")
+
+						// end filter__bottom_grid
+						
+					.filter__bottom_action
+						a.filter__bottom_check Применить
+							span.icon.icon__check-o
+						a.filter__bottom_clear Очистить
+
+	.add__project
+		a.btn(href="#") Добавить проект
+
+	// begin table 
+	table.table.table__projects
+		thead
+			tr
+				th
+					.form__check
+						input(type="checkbox")
+					label.form__label ID
+				th Название
+				th Тип
+				th Клиент
+				th Создан 
+					.icon__caret_down
+				th Менеджер
+				th Оцениваемые
+		tbody
+			tr.primary
+				td 
+					.form__check
+						input(type="checkbox")
+					label.form__label 38
+				td
+					a(href="#") Экопси 2014 боевой
+				td Опрос 360°
+				td Экопси консалтинг
+				td Сегодня
+				td Константинопольский Ко..
+				td 80
+			tr.muted.selected
+				td 
+					.form__check
+						input(type="checkbox" checked)
+					label.form__label 38
+				td
+					a(href="#") Экопси 2014 боевой
+				td Опрос 360°
+				td Экопси консалтинг
+				td Сегодня
+				td Константинопольский Ко..
+				td 80
+			tr.success.selected
+				td 
+					.form__check
+						input(type="checkbox" checked)
+					label.form__label 38
+				td
+					a(href="#") Экопси 2014 боевой
+				td Опрос 360°
+				td Экопси консалтинг
+				td Сегодня
+				td Константинопольский Ко..
+				td 80
+			tr.danger
+				td 
+					.form__check
+						input(type="checkbox")
+					label.form__label 38
+				td
+					a(href="#") Экопси 2014 боевой
+				td Опрос 360°
+				td Экопси консалтинг
+				td Сегодня
+				td Константинопольский Ко..
+				td 80
+			tr.warning
+				td 
+					.form__check
+						input(type="checkbox")
+					label.form__label 38
+				td
+					a(href="#") Экопси 2014 боевой
+				td Опрос 360°
+				td Экопси консалтинг
+				td Сегодня
+				td Константинопольский Ко..
+				td 80
+			tr.secondary
+				td 
+					.form__check
+						input(type="checkbox")
+					label.form__label 38
+				td
+					a(href="#") Экопси 2014 боевой
+				td Опрос 360°
+				td Экопси консалтинг
+				td Сегодня
+				td Константинопольский Ко..
+				td 80
+
+	// end table 

@@ -1,11 +1,11 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family:								"Century Gothic";
+$main_font_family:								"Arial";
 $main_color:									#000;
 $main_line_height:								1.2;
-$main_font_size:								16px;
+$main_font_size:								13px;
 
-$container_width:								970px;
+$container_width:								100%;
 
 $footer_height: 								auto;
 
@@ -42,23 +42,23 @@ $grid_padding:									20px;
 // Input color
 $input_color:									$main_color;
 $input_bg_color:								#fff;
-$input_border_color:							#ddd;
-$input_placeholder_color:						#ddd;
+$input_border_color:							#d2d2d2;
+$input_placeholder_color:						#818181;
 
 // Input hover color
-$input_hover_color:								#fff;
+$input_hover_color:								$input_color;
 $input_hover_bg_color:							#fff;
-$input_hover_border_color:						#ddd;
-$input_hover_placeholder_color:					#ddd;
+$input_hover_border_color:						#d2d2d2;
+$input_hover_placeholder_color:					$input_placeholder_color;
 
 // Input focus color
-$input_focus_color:								#fff;
-$input_focus_bg_color:							#fff;
-$input_focus_border_color:						#ddd;
-$input_focus_placeholder_color:					#ddd;
+$input_focus_color:								$input_color;
+$input_focus_bg_color:							#f9f9f9;
+$input_focus_border_color:						#d2d2d2;
+$input_focus_placeholder_color:					$input_placeholder_color;
 
 // Input disabled color
-$input_disabled_color:							#fff;
+$input_disabled_color:							$input_color;
 $input_disabled_bg_color:						#ccc;
 $input_disabled_border_color:					#ccc;
 $input_disabled_placeholder_color:				#fff;
@@ -70,11 +70,10 @@ $input_error_border_color:						red;
 $input_error_placeholder_color:					red;
 
 // Button variables
-$btn_default_bg_color:				 			#ddd;
-$btn_default_text_color:                        $main_color;
+$btn_default_bg_color:				 			#27ae60;
+$btn_default_text_color:                        #fff;
 $btn_contrast_text_color:                       $color_withe;
 $btn_default_bg_color_hover:					#ccc;
-
 
 
 /* Breakpoints */ 

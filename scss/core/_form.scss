@@ -11,29 +11,30 @@ input[type=datetime],
 textarea {
 	background-color: $input_bg_color;
 	border: 1px solid $input_border_color;
-	padding: 6px 15px;
+	padding: 4px 8px;
 	outline: none;
-	font-size: 16px;
+	font-size: 13px;
 	font-weight: 300;
 	font-family: $main_font_family;
-	border-radius: 5px;
+	border-radius: 2px;
 	@include trs(0.3s);
 	&:hover {
 	}
 	&:focus {
-		border: 1px solid #bebebe;
-		background-color: #f6f6f6;
+		background-color: $input_focus_bg_color;
+		border: 1px solid $input_focus_border_color;
+	}
+	&.input_error {
+		background-color: $input_error_bg_color;
+		border: 1px solid $input_error_border_color;
 		@include placeholder {
 			color: red;
 		}
 	}
-	&.input_error {
-		background-color: #fff0f0;
-		border: 1px solid red;
-	}
 	// Placeholder for input +++++++++++++++
 	@include placeholder {
 		color: $input_placeholder_color;
+		font-style: italic;
 	}
 }
 
@@ -61,17 +62,19 @@ input[type=radio]:not(:disabled) {
 input[type=checkbox],
 input[type=radio] {
     display: inline-block;
-    height: 14px;
-    width: 14px;
-    border: 1px solid #aaa;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #d2d2d2;
     overflow: hidden;
     margin-top: -4px;
     vertical-align: middle;
     -webkit-appearance: none;
     outline: 0;
     background: 0 0;
+    background-color: #f9f9f9;
     text-align: center;
     position: relative;
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.05);
 }
 
 input[type=radio] {
@@ -94,17 +97,18 @@ input[type=radio]:checked:before {
     display: block;
     position: absolute;
     border-radius: 50%;
-    background: #000;
+    background: #0d92d0;
 }
 
 input[type=checkbox]:checked:before,
 input[type=checkbox]:indeterminate:before {
-    content: "\2714";
+    content: url(../img/check.png);
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
     text-align: center;
-    line-height: 13px;
-    color: #000;
+    line-height: 9px;
+    margin-left: -1px;
+    // color: #000;
 }
 
 input[type=checkbox]:indeterminate:before {
@@ -130,9 +134,9 @@ input[type=checkbox]:disabled:indeterminate:before {
 .btn {
 	color: $btn_default_text_color;
 	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 300;
-	padding: 5px 15px 7px;
+	font-size: 13px;
+	font-weight: 400;
+	padding: 4px 15px 5px;
 	border: none;
 	outline: none;
 	text-decoration: none;
@@ -141,17 +145,18 @@ input[type=checkbox]:disabled:indeterminate:before {
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 5px;
-	@include trs(0.3s);
+	border-radius: 3px;
+	@include trs(0.3);
 	&:hover {
-		background-color: lighten($btn_default_bg_color, 20%);
+		background-color: darken($btn_default_bg_color, 8%);
+		text-decoration: none;
 	}
 	@each $status_el, $color_bg in $el_colors {
 		&__#{$status_el} {
 			background-color: $color_bg;
 			color: $btn_contrast_text_color;
 			&:hover {
-				background-color: lighten($color_bg, 20%);
+				background-color: darken($color_bg, 20%);
 			}
 		}
 	}	

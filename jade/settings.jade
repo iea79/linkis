@@ -1,0 +1,83 @@
+extends template.jade
+
+block breadcrumb
+	li
+		a(href="#") Проекты
+	li
+		a(href="#" class="active") Добавление проекта
+
+block titlepage
+	|Добавление проекта
+
+block content
+	.content__wrap
+		// begin tabs__swicher 
+		.tabs__swicher
+			.tabs__swicher_item Настройки
+			.tabs__swicher_item.more
+				img(src="img/dots_more.png", alt="")
+			
+		// end tabs__swicher 
+
+		// begin tabs__content 
+		.tabs__content
+			.tabs__content_form.form__stacked
+				.form__row
+					label.form__label Название
+					.form__field
+						input.width__1(type="text")
+				.form__row
+					label.form__label Тип
+					.form__field
+						// begin radio__grid
+						.grid.radio__grid
+							div
+								input(type="radio" id="set1" name="settype" checked)
+								label(for="set1").radio__grid_label
+									.radio__grid_name Опрос 360°
+									.radio__grid_img
+										img(src="img/set1.png", alt="")
+							div
+								input(type="radio" id="set2" name="settype")
+								label(for="set2").radio__grid_label
+									.radio__grid_name Линейный
+									.radio__grid_img
+										img(src="img/set2.png", alt="")
+							div
+								input(type="radio" id="set3" name="settype")
+								label(for="set3").radio__grid_label
+									.radio__grid_name Тестирование
+									.radio__grid_img
+										img(src="img/set3.png", alt="")
+							div
+								input(type="radio" id="set4" name="settype")
+								label(for="set4").radio__grid_label
+									.radio__grid_name Workflow
+									.radio__grid_img
+										img(src="img/set4.png", alt="")
+							div
+								input(type="radio" id="set5" name="settype")
+								label(for="set5").radio__grid_label
+									.radio__grid_name Realtime Feedback
+									.radio__grid_img
+										img(src="img/set5.png", alt="")
+						// end radio__grid
+						
+				.form__row.width__2
+					label.form__label Клиент
+					.form__field
+						select(name="")
+							option(value="") Тестовый клиент 1
+							option(value="") Тестовый клиент 2
+							option(value="") Тестовый клиент 3
+				.form__row.width__2
+					label.form__label Менеджер
+					.form__field.dots
+						input.width__1(type="text" value="Константин Константинопольский")
+
+		// end tabs__content 
+
+		// begin tabs__foot 
+		.tabs__foot
+			button.btn Далее →
+		// end tabs__foot 
