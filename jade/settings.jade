@@ -13,7 +13,7 @@ block content
 	.content__wrap
 		// begin tabs__swicher 
 		.tabs__swicher
-			.tabs__swicher_item Настройки
+			.tabs__swicher_item.active Настройки
 			.tabs__swicher_item.more
 				img(src="img/dots_more.png", alt="")
 			
@@ -73,7 +73,8 @@ block content
 				.form__row.width__2
 					label.form__label Менеджер
 					.form__field.dots
-						input.width__1(type="text" value="Константин Константинопольский")
+						input.width__1(type="text" value="Константин Константинопольский" readonly)
+						a(href="#").icon.icon__dots
 
 		// end tabs__content 
 

@@ -277,6 +277,15 @@ a {
 			right: 0;
 		}
 	}
+	&__dots {
+		&:before {
+			content: '•••';
+			font-size: 21px;
+			line-height: 30px;
+			height: 30px;
+			letter-spacing: 1px;
+		}
+	}
 }
 
 /* Aside
@@ -342,15 +351,21 @@ a {
 	&__field {
 		&.dots {
 			position: relative;
-			&:after {
-				content: url('../img/dots.svg');
-				position: absolute;
-				right: 8px;
-				top: 2px;
-			}
 			input {
 				padding-right: 30px;
-			}			
+			}
+			.icon {
+				position: absolute;
+				right: 3px;
+				top: 0;
+				cursor: pointer;
+				color: #000;
+				transition: color 0.3s;
+				&:hover {
+					text-decoration: none;
+					color: lighten(#000, 50%);
+				}
+			}		
 		}
 	}
 	&__date {
@@ -700,7 +715,6 @@ a {
 		padding: 0 15px;
 		box-sizing: content-box;
 		margin: 0 -30px;
-		// position: relative;
 		&_item {
 			font-weight: 600;
 			padding: 0 15px 13px;
@@ -717,6 +731,9 @@ a {
 				background-color: #000;
 				opacity: 0;
 				transition: opacity .3s;
+			}
+			img {
+				margin-bottom: 2px;
 			}
 			&.more {
 				cursor: default;

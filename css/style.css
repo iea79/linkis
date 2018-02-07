@@ -1098,6 +1098,12 @@ a {
       -ms-transform: rotate(-40deg);
       transform: rotate(-40deg);
       right: 0; }
+  .icon__dots:before {
+    content: '•••';
+    font-size: 21px;
+    line-height: 30px;
+    height: 30px;
+    letter-spacing: 1px; }
 
 /* Aside
 -------------------------------------------------------------------------------*/
@@ -1141,13 +1147,20 @@ a {
 
 .form__field.dots {
   position: relative; }
-  .form__field.dots:after {
-    content: url("../img/dots.svg");
-    position: absolute;
-    right: 8px;
-    top: 2px; }
   .form__field.dots input {
     padding-right: 30px; }
+  .form__field.dots .icon {
+    position: absolute;
+    right: 3px;
+    top: 0;
+    cursor: pointer;
+    color: #000;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s; }
+    .form__field.dots .icon:hover {
+      text-decoration: none;
+      color: gray; }
 
 .form__date {
   display: inline-block; }
@@ -1368,6 +1381,8 @@ a {
       -webkit-transition: opacity .3s;
       -o-transition: opacity .3s;
       transition: opacity .3s; }
+    .tabs__swicher_item img {
+      margin-bottom: 2px; }
     .tabs__swicher_item.more {
       cursor: default; }
     .tabs__swicher_item:hover.more:after, .tabs__swicher_item.active.more:after {
