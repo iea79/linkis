@@ -1,0 +1,36 @@
+/* Aside
+-------------------------------------------------------------------------------*/
+.sidebar {
+	float: left;
+	background-color: #fff;
+	width: 240px;
+	font-size: 15px;
+	position: relative;
+	&__wrap {
+		overflow-y: auto;
+		max-height: 100%;
+	}
+	&__content {
+		padding: 14px 18px 14px 45px;
+	}
+	&__list {
+		padding: 0;
+		list-style: none;
+		margin: 0;
+		margin-bottom: 59px;
+		>li {
+			margin: 4px 0;
+		}
+	}
+	&__title {
+		color: #5a5a5a;
+		font-size: 15px;
+		font-weight: 700;
+		margin-bottom: 8px;
+	}
+	.form {
+		&__label {
+			color: #0d92d0;
+		}
+	}
+}

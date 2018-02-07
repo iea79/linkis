@@ -1,0 +1,26 @@
+.title__box {
+	padding: 6px 45px 8px;
+	border-bottom: 1px solid #e9e9e9;
+	background-color: #fff;
+	position: relative;
+	@extend %clear_a;
+	.breadcrumb {
+		vertical-align: top;
+	}
+	&_wrap {
+		display: table;
+		width: 100%;
+		height: 85px;
+		> div {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+	&_right {
+		text-align: right;
+	}
+	&_left {
+		font-size: 27px;
+		font-weight: 900;
+	}
+}

@@ -1,0 +1,120 @@
+.table {
+	border-collapse: collapse;;
+	border: 1px solid #e9e9e9;
+	background-color: #ffffff;
+	width: 100%;
+	th, td {
+		border: none;
+		font-weight: 400;
+		padding: 9px 6px;
+		height: 47px;
+		text-align: left;
+		vertical-align: middle;
+	}
+	thead {
+		background-color: #f8fdff;
+	}
+	tr {
+		position: relative;
+		border-top: 1px solid #e9e9e9;
+		td {
+			&:last-child {
+				position: relative;
+				&:before {
+					content: '';
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 0;
+					bottom: 0;
+				}
+			}
+		}
+		&.selected {
+			background-color: #fffeee;
+		}
+		&.primary {
+			td {
+				&:last-child {
+					&:before {
+						border-right: 6px solid #0098d6;
+					}
+				}
+			}
+		}
+		&.muted {
+			td {
+				&:last-child {
+					&:before {
+						border-right: 6px solid #00bb9c;
+					}
+				}
+			}
+		}
+		&.success {
+			td {
+				&:last-child {
+					&:before {
+						border-right: 6px solid #f7c13d;
+					}
+				}
+			}
+		}
+		&.danger {
+			td {
+				&:last-child {
+					&:before {
+						border-right: 6px solid #d9521f;
+					}
+				}
+			}
+		}
+		&.warning {
+			td {
+				&:last-child {
+					&:before {
+						border-right: 6px solid #344b5d;
+					}
+				}
+			}
+		}
+		&.secondary {
+			td {
+				&:last-child {
+					&:before {
+						border-right: 6px solid #08ad66;
+					}
+				}
+			}
+		}
+	}
+	.form__check {
+		margin-right: 5px;
+	}
+	&__projects {
+		th,td {
+			&:first-of-type {
+				
+			}
+			&:nth-of-type(2) {
+				
+			}
+			&:nth-of-type(3) {
+				
+			}
+			&:nth-of-type(4) {
+				
+			}
+			&:nth-of-type(5) {
+				
+			}
+			&:nth-of-type(6) {
+				
+			}
+			&:last-of-type {
+				text-align: right;
+				padding-right: 15px;
+			}
+		}
+	}
+}

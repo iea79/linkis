@@ -1,0 +1,21 @@
+extends template.jade
+
+block breadcrumb
+	li
+		a(href="#") Проекты
+	li
+		a(href="#" class="active") Добавление проекта
+
+block titlepage
+	|Добавление проекта
+
+block content
+	.content__wrap
+		// begin tabs__swicher 
+		.tabs__swicher
+			.tabs__swicher_item Настройки
+			.tabs__swicher_item.active Тесты и нормы
+			.tabs__swicher_item Отчеты
+			.tabs__swicher_item Администраторы
+			.tabs__swicher_item Биллинг
+			.tabs__swicher_item Итоги
