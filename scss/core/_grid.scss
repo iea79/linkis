@@ -82,6 +82,26 @@
 	}
 }
 
+.width {
+	&__1 {
+		width: 100%;
+	}
+	&__2 {
+		width: 50%;
+	}
+	&__2_3 {
+		width: 66.6%;
+	}
+	&__3 {
+		width: 33.3%;
+	}
+	&__4 {
+		width: 25%;
+	}
+	&__5 {
+		width: 20%;
+	}
+}
 
 [data-grid-match] {
 	.grid__item {

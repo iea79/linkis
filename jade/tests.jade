@@ -13,9 +13,113 @@ block content
 	.content__wrap
 		// begin tabs__swicher 
 		.tabs__swicher
-			.tabs__swicher_item Настройки
-			.tabs__swicher_item.active Тесты и нормы
-			.tabs__swicher_item Отчеты
-			.tabs__swicher_item Администраторы
-			.tabs__swicher_item Биллинг
-			.tabs__swicher_item Итоги
+			a(href="#").tabs__swicher_item Настройки
+			a(href="#").tabs__swicher_item.active Тесты и нормы
+			a(href="#").tabs__swicher_item Отчеты
+			a(href="#").tabs__swicher_item Администраторы
+			a(href="#").tabs__swicher_item Биллинг
+			a(href="#").tabs__swicher_item Итоги
+
+		// end tabs__swicher 
+
+		// begin tabs__content 
+		.tabs__content
+
+			// begin tests__grid
+			.content__grid
+				// begin title row 
+				.content__grid_title_row
+					.width__3
+						.content__grid_title Группы
+					.width__3
+						.content__grid_title Тесты
+					.width__3
+						.content__grid_title Нормы
+					
+				// end title row 
+
+				// begin line 1 
+				.content__grid_row
+					.content__grid_first
+						i.icon.icon__remove
+						.content__grid_label Основная
+						a(href="#").content__grid_action Дублировать
+					.content__grid_group
+						.content__grid_group-row
+							.content__grid_item
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF 5.5")
+										a(href="#").icon.icon__dots
+								
+							.content__grid_item
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF 5.5   09.2016   ")
+										a(href="#").icon.icon__dots
+									a(href="#").content__grid_action Добавить
+						.content__grid_group-row
+							.content__grid_item
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF LA 5.5")
+										a(href="#").icon.icon__dots
+									a(href="#").content__grid_action Добавить
+								
+							.content__grid_item
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF 5.5   09.2016")
+										a(href="#").icon.icon__dots
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF 5.5   09.2016")
+										a(href="#").icon.icon__dots
+									a(href="#").content__grid_action Добавить
+					
+				// end line 1 
+
+				// begin line 2 
+				.content__grid_row
+					.content__grid_first
+						.form__field_wrap
+							i.icon.icon__remove
+							.form__field
+								input.width__1(type="text" value="Сбербанк Технологии" readonly)
+						a(href="#").content__grid_action Дублировать,  
+						a(href="#").content__grid_action Добавить
+					.content__grid_group
+						.content__grid_group-row
+							.content__grid_item
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF 5.5")
+										a(href="#").icon.icon__dots
+									a(href="#").content__grid_action Добавить
+								
+							.content__grid_item
+								.form__field_wrap
+									i.icon.icon__remove
+									.form__field.dots
+										input.width__1(type="text" value="PIF 5.5   09.2016")
+										a(href="#").icon.icon__dots
+									a(href="#").content__grid_action Добавить
+					
+				// end line 2 
+
+			// end tests__grid
+			
+
+		// end tabs__content 
+
+		// begin tabs__foot 
+		.tabs__foot
+			button.btn.btn__info ← Назад
+			button.btn Далее →
+		// end tabs__foot 

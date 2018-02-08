@@ -36,6 +36,9 @@ textarea {
 		color: $input_placeholder_color;
 		font-style: italic;
 	}
+	&[readonly] {
+		background-color: #f9f9f9;
+	}
 }
 
 input[type=search]::-webkit-search-cancel-button,
@@ -156,8 +159,12 @@ input[type=checkbox]:disabled:indeterminate:before {
 			background-color: $color_bg;
 			color: $btn_contrast_text_color;
 			&:hover {
-				background-color: darken($color_bg, 20%);
+				background-color: darken($color_bg, 10%);
 			}
 		}
+	}
+	&__info {
+		// border: 1px solid #c1bfbf;
+		color: $main_color;
 	}	
 }

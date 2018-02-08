@@ -44,7 +44,7 @@
 	&__dots {
 		&:before {
 			content: '•••';
-			font-size: 21px;
+			font-size: 17px;
 			line-height: 30px;
 			height: 30px;
 			letter-spacing: 1px;
@@ -54,6 +54,28 @@
 		&:before {
 			content: url('../img/check-o.svg');
 			display: inline-block;
+		}
+	}
+	&__caret {
+		&_down,&_up {
+			width: 10px;
+			height: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			background: url('../img/caret.svg') no-repeat center center;
+			cursor: pointer;
+			text-decoration: none;
+		}
+		&_down {
+
+		}
+		&_up {
+			transform: rotate(180deg);
+		}
+	}
+	&__remove {
+		&:before {
+			content: url('../img/delete.svg');
 		}
 	}
 }

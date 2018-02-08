@@ -120,14 +120,110 @@
       <main class="main__content">
         <div class="content__wrap">
           <!-- begin tabs__swicher -->
-          <div class="tabs__swicher">
-            <div class="tabs__swicher_item">Настройки</div>
-            <div class="tabs__swicher_item active">Тесты и нормы</div>
-            <div class="tabs__swicher_item">Отчеты</div>
-            <div class="tabs__swicher_item">Администраторы</div>
-            <div class="tabs__swicher_item">Биллинг</div>
-            <div class="tabs__swicher_item">Итоги</div>
+          <div class="tabs__swicher"><a class="tabs__swicher_item" href="#">Настройки</a><a class="tabs__swicher_item active" href="#">Тесты и нормы</a><a class="tabs__swicher_item" href="#">Отчеты</a><a class="tabs__swicher_item" href="#">Администраторы</a><a class="tabs__swicher_item" href="#">Биллинг</a><a class="tabs__swicher_item" href="#">Итоги</a></div>
+          <!-- end tabs__swicher -->
+          <!-- begin tabs__content -->
+          <div class="tabs__content">
+            <!-- begin tests__grid-->
+            <div class="content__grid">
+              <!-- begin title row -->
+              <div class="content__grid_title_row">
+                <div class="width__3">
+                  <div class="content__grid_title">Группы</div>
+                </div>
+                <div class="width__3">
+                  <div class="content__grid_title">Тесты</div>
+                </div>
+                <div class="width__3">
+                  <div class="content__grid_title">Нормы</div>
+                </div>
+              </div>
+              <!-- end title row -->
+              <!-- begin line 1 -->
+              <div class="content__grid_row">
+                <div class="content__grid_first"><i class="icon icon__remove"></i>
+                  <div class="content__grid_label">Основная</div><a class="content__grid_action" href="#">Дублировать</a>
+                </div>
+                <div class="content__grid_group">
+                  <div class="content__grid_group-row">
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF 5.5"/><a class="icon icon__dots" href="#"></a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF 5.5   09.2016   "/><a class="icon icon__dots" href="#"></a>
+                        </div><a class="content__grid_action" href="#">Добавить</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content__grid_group-row">
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF LA 5.5"/><a class="icon icon__dots" href="#"></a>
+                        </div><a class="content__grid_action" href="#">Добавить</a>
+                      </div>
+                    </div>
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF 5.5   09.2016"/><a class="icon icon__dots" href="#"></a>
+                        </div>
+                      </div>
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF 5.5   09.2016"/><a class="icon icon__dots" href="#"></a>
+                        </div><a class="content__grid_action" href="#">Добавить</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end line 1 -->
+              <!-- begin line 2 -->
+              <div class="content__grid_row">
+                <div class="content__grid_first">
+                  <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                    <div class="form__field">
+                      <input class="width__1" type="text" value="Сбербанк Технологии" readonly="readonly"/>
+                    </div>
+                  </div><a class="content__grid_action" href="#">Дублировать,  </a><a class="content__grid_action" href="#">Добавить</a>
+                </div>
+                <div class="content__grid_group">
+                  <div class="content__grid_group-row">
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF 5.5"/><a class="icon icon__dots" href="#"></a>
+                        </div><a class="content__grid_action" href="#">Добавить</a>
+                      </div>
+                    </div>
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"><i class="icon icon__remove"></i>
+                        <div class="form__field dots">
+                          <input class="width__1" type="text" value="PIF 5.5   09.2016"/><a class="icon icon__dots" href="#"></a>
+                        </div><a class="content__grid_action" href="#">Добавить</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end line 2 -->
+            </div>
+            <!-- end tests__grid-->
           </div>
+          <!-- end tabs__content -->
+          <!-- begin tabs__foot -->
+          <div class="tabs__foot">
+            <button class="btn btn__info">← Назад</button>
+            <button class="btn">Далее →</button>
+          </div>
+          <!-- end tabs__foot -->
         </div>
       </main>
       <!-- end main__content -->
