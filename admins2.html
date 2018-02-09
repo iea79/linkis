@@ -120,82 +120,83 @@
       <main class="main__content">
         <div class="content__wrap">
           <!-- begin tabs__swicher -->
-          <div class="tabs__swicher"><a class="tabs__swicher_item active" href="#">Настройки</a><a class="tabs__swicher_item more" href="#"><img src="img/dots_more.png" alt=""/></a></div>
+          <div class="tabs__swicher"><a class="tabs__swicher_item" href="#">Настройки</a><a class="tabs__swicher_item" href="#">Тесты и нормы</a><a class="tabs__swicher_item" href="#">Отчеты</a><a class="tabs__swicher_item active" href="#">Администраторы</a><a class="tabs__swicher_item" href="#">Биллинг</a><a class="tabs__swicher_item" href="#">Итоги</a></div>
           <!-- end tabs__swicher -->
+          <!-- begin radio__swicher -->
+          <div class="radio__swicher">
+            <div class="radio__swicher_wrap">
+              <input type="radio" name="swicher" id="group1"/>
+              <label class="radio__swicher_item" for="group1">По группам</label>
+              <input type="radio" name="swicher" id="group2" checked="checked"/>
+              <label class="radio__swicher_item" for="group2">По администраторам</label>
+            </div>
+          </div>
+          <!-- end radio__swicher -->
           <!-- begin tabs__content -->
           <div class="tabs__content">
-            <div class="tabs__content_form form__stacked">
-              <div class="form__row">
-                <label class="form__label">Название</label>
-                <div class="form__field">
-                  <input class="width__1" type="text"/>
+            <!-- begin tests__grid-->
+            <div class="content__grid">
+              <!-- begin title row -->
+              <div class="content__grid_title_row">
+                <div class="width__3">
+                  <div class="content__grid_title">Администраторы</div>
+                </div>
+                <div class="width__3">
+                  <div class="content__grid_title">Тесты</div>
+                </div>
+                <div class="width__3">
+                  <div class="content__grid_title">Группы</div>
                 </div>
               </div>
-              <div class="form__row">
-                <label class="form__label">Тип</label>
-                <div class="form__field">
-                  <!-- begin radio__grid-->
-                  <div class="grid radio__grid">
-                    <div>
-                      <input type="radio" id="set1" name="settype" checked="checked"/>
-                      <label class="radio__grid_label" for="set1">
-                        <div class="radio__grid_name">Опрос 360°</div>
-                        <div class="radio__grid_img"><img src="img/set1.png" alt=""/></div>
-                      </label>
+              <!-- end title row -->
+              <!-- begin line 1 -->
+              <div class="content__grid_row">
+                <div class="content__grid_first">
+                  <div class="content__grid_label">Шатров Юрий</div>
+                  <div class="content__grid_label-sub">ЭКОПСИ</div>
+                </div>
+                <div class="content__grid_group">
+                  <div class="content__grid_group-row">
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap">
+                        <div class="content__grid_sublink">ЭКОПСИ →</div>
+                        <div class="content__grid_label">PIF LA</div>
+                      </div>
                     </div>
-                    <div>
-                      <input type="radio" id="set2" name="settype"/>
-                      <label class="radio__grid_label" for="set2">
-                        <div class="radio__grid_name">Линейный</div>
-                        <div class="radio__grid_img"><img src="img/set2.png" alt=""/></div>
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" id="set3" name="settype"/>
-                      <label class="radio__grid_label" for="set3">
-                        <div class="radio__grid_name">Тестирование</div>
-                        <div class="radio__grid_img"><img src="img/set3.png" alt=""/></div>
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" id="set4" name="settype"/>
-                      <label class="radio__grid_label" for="set4">
-                        <div class="radio__grid_name">Workflow</div>
-                        <div class="radio__grid_img"><img src="img/set4.png" alt=""/></div>
-                      </label>
-                    </div>
-                    <div>
-                      <input type="radio" id="set5" name="settype"/>
-                      <label class="radio__grid_label" for="set5">
-                        <div class="radio__grid_name">Realtime Feedback</div>
-                        <div class="radio__grid_img"><img src="img/set5.png" alt=""/></div>
-                      </label>
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap"></div>
                     </div>
                   </div>
-                  <!-- end radio__grid-->
-                </div>
-              </div>
-              <div class="form__row width__2">
-                <label class="form__label">Клиент</label>
-                <div class="form__field">
-                  <select name="">
-                    <option value="">Тестовый клиент 1</option>
-                    <option value="">Тестовый клиент 2</option>
-                    <option value="">Тестовый клиент 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form__row width__2">
-                <label class="form__label">Менеджер</label>
-                <div class="form__field dots">
-                  <input class="width__1" type="text" value="Константин Константинопольский" readonly="readonly"/><a class="icon icon__dots" href="#"></a>
+                  <div class="content__grid_group-row">
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap">
+                        <div class="content__grid_label">PIF 5.5</div>
+                      </div>
+                    </div>
+                    <div class="content__grid_item">
+                      <div class="form__field_wrap">
+                        <div class="content__grid_sublink"><a href="#">Права</a></div>
+                        <div class="form__field">
+                          <select class="add" name="">
+                            <optgroup label="ЭКОПСИ">
+                              <option value="Шатров Юрий">Шатров Юрий</option>
+                              <option value="Павел Безручко">Павел Безручко</option>
+                            </optgroup>
+                            <optgroup label="Клиент">
+                              <option value="Греф Станислав">Греф Станислав</option>
+                            </optgroup>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <!-- end tabs__content -->
           <!-- begin tabs__foot -->
           <div class="tabs__foot">
+            <button class="btn btn__info">← Назад</button>
             <button class="btn">Далее →</button>
           </div>
           <!-- end tabs__foot -->

@@ -1,0 +1,145 @@
+extends template.jade
+
+block breadcrumb
+	li
+		a(href="#") Проекты
+	li
+		a(href="#" class="active") Добавление проекта
+
+block titlepage
+	|Добавление проекта
+
+block content
+	.content__wrap
+		// begin tabs__swicher 
+		.tabs__swicher
+			a(href="#").tabs__swicher_item Настройки
+			a(href="#").tabs__swicher_item Тесты и нормы
+			a(href="#").tabs__swicher_item.active Отчеты
+			a(href="#").tabs__swicher_item Администраторы
+			a(href="#").tabs__swicher_item Биллинг
+			a(href="#").tabs__swicher_item Итоги
+
+		// end tabs__swicher 
+
+		// begin tabs__content 
+		.tabs__content
+
+			// begin tests__grid
+			.content__grid
+				// begin title row 
+				.content__grid_title_row
+					.width__3
+						.content__grid_title Группа, тест
+					.width__3
+						.content__grid_title Индивидуальные отчеты в PDF
+					.width__3
+						.content__grid_title Групповые отчеты в XLS
+					
+				// end title row 
+
+				// begin line 1 
+				.content__grid_row
+					.content__grid_first
+						.content__grid_border
+							|Основная группа <br>
+							|PIF 5.5
+					.content__grid_group
+						.content__grid_group-row
+							.content__grid_item
+								.content__settings_wrap
+									.content__settings
+										a(href="#drop1" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop#drop1
+											.content__settings_drop-title Показывать:
+											.form__row
+												.form__check
+													input(type="checkbox", id="check1")
+												label(for="check1").form__label итоговый балл
+											.form__row
+												.form__check
+													input(type="checkbox", id="check2")
+												label(for="check2").form__label данные ЭКОПСИ
+											.content__settings_drop-title Использовать:
+											.form__row
+												.form__check
+													input(type="checkbox", id="check3")
+												label(for="check3").form__label логотип и название клиента
+													input(type="text" placeholder="укажите название")
+											.form__row
+												.form__check
+													input(type="checkbox", id="check4")
+												label(for="check4").form__label цвет клиента
+													.color__pick(style="background-color: #4caf50;")
+											
+										// end content__settings_drop 
+									.content__grid_label Для заказчика
+								.content__settings_wrap
+									.content__settings
+										a(href="#drop4" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop#drop4
+											.content__settings_drop-title Показывать:
+											.form__row
+												.form__check
+													input(type="checkbox", id="check21")
+												label(for="check21").form__label итоговый балл
+											.form__row
+												.form__check
+													input(type="checkbox", id="check22")
+												label(for="check22").form__label данные ЭКОПСИ
+											.content__settings_drop-title Использовать:
+											.form__row
+												.form__check
+													input(type="checkbox", id="check23")
+												label(for="check23").form__label логотип и название клиента
+													input(type="text" placeholder="укажите название")
+											.form__row
+												.form__check
+													input(type="checkbox", id="check24")
+												label(for="check24").form__label цвет клиента
+													.color__pick(style="background-color: #4caf50;")
+											
+									.content__grid_label Для заказчика
+								.content__settings_wrap
+									a(href="#").content__settings_add Добавить отчет
+
+							.content__grid_item
+								.content__settings_wrap
+									.content__settings
+										a(href="#drop2" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop#drop2
+											.content__settings_drop-title Показывать:
+											.form__row
+												.form__check
+													input(type="checkbox", id="check11")
+												label(for="check11").form__label итоговый балл
+											.form__row
+												.form__check
+													input(type="checkbox", id="check12")
+												label(for="check12").form__label данные ЭКОПСИ
+											.content__settings_drop-title Использовать:
+											.form__row
+												.form__check
+													input(type="checkbox", id="check13")
+												label(for="check13").form__label логотип и название клиента
+													input(type="text" placeholder="укажите название")
+											.form__row
+												.form__check
+													input(type="checkbox", id="check14")
+												label(for="check14").form__label цвет клиента
+													.color__pick(style="background-color: #4caf50;")
+											
+										// end content__settings_drop 
+									.content__grid_label Для заказчика
+								.content__settings_wrap
+									a(href="#").content__settings_add Добавить отчет
+
+
+		// begin tabs__foot 
+		.tabs__foot
+			button.btn.btn__info ← Назад
+			button.btn Далее →
+		// end tabs__foot 

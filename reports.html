@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Project</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=1024"/>
+    <link href="css/style.css?0.1" rel="stylesheet"/>
+    <link href="css/select2.css?0.1" rel="stylesheet"/>
+    <!-- Удалить modal.js и tab.js если подключен bootstrap-->
+    <script src="js/jquery.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/function.js?0.1"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header-->
+      <header class="header"><a class="header__logo"><img src="img/logo.png"/></a>
+        <!-- begin header__user -->
+        <div class="header__user">
+          <div class="header__user_ava">
+            <div class="header__user_ava-img"><img src="img/avatar.png" alt=""/></div>
+          </div>
+          <div class="header__user_name">Гурбангулы <br>Бердымухаммедов</div>
+          <div class="header__user_action"><span class="icon icon__logout"></span></div>
+        </div>
+        <!-- end header__user -->
+        <!-- begin navbar -->
+        <ul class="header__nav">
+          <li><a>ПРОЕКТЫ</a></li>
+          <li><a>ДОКУМЕНТАЦИЯ</a></li>
+          <li><a>НАСТРОЙКИ</a></li>
+          <li><a>БИБЛИОТЕКА</a></li>
+          <li><a>ПОИСК</a></li>
+        </ul>
+        <!-- end navbar -->
+      </header>
+      <!-- end header-->
+      <!-- begin title_box-->
+      <div class="title__box">
+        <div class="title__box_wrap">
+          <div class="title__box_left">
+            <!-- begin breadcrumb -->
+            <ul class="breadcrumb">
+              <li><a href="#">Проекты</a></li>
+              <li><a class="active" href="#">Добавление проекта</a></li>
+            </ul>
+            <!-- end breadcrumb -->Добавление проекта
+          </div>
+          <div class="title__box_right"><img src="img/sberbank.png" alt=""/></div>
+        </div>
+      </div>
+      <!-- end title_box-->
+      <!-- begin aside-->
+      <aside class="sidebar">
+        <div class="sidebar__wrap">
+          <div class="sidebar__content">
+            <div class="sidebar__title">Типы</div>
+            <ul class="sidebar__list">
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch1"/>
+                </div>
+                <label class="form__label" for="ch1">Опрос 360°</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch2"/>
+                </div>
+                <label class="form__label" for="ch2">Линейный опрос</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch3"/>
+                </div>
+                <label class="form__label" for="ch3">Тестирование</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch4"/>
+                </div>
+                <label class="form__label" for="ch4">Workflow</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch5"/>
+                </div>
+                <label class="form__label" for="ch5">Realtime Feedback</label>
+              </li>
+            </ul>
+            <div class="sidebar__title">Состав</div>
+            <ul class="sidebar__list">
+              <li>
+                <div class="form__radio">
+                  <input type="radio" id="rd1" name="sostav"/>
+                </div>
+                <label class="form__label" for="rd1">Все</label>
+              </li>
+              <li>
+                <div class="form__radio">
+                  <input type="radio" id="rd2" name="sostav"/>
+                </div>
+                <label class="form__label" for="rd2">Все кроме архивных</label>
+              </li>
+              <li>
+                <div class="form__radio">
+                  <input type="radio" id="rd3" name="sostav"/>
+                </div>
+                <label class="form__label" for="rd3">Архивные</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- end aside-->
+      <!-- begin main__content-->
+      <main class="main__content">
+        <div class="content__wrap">
+          <!-- begin tabs__swicher -->
+          <div class="tabs__swicher"><a class="tabs__swicher_item" href="#">Настройки</a><a class="tabs__swicher_item" href="#">Тесты и нормы</a><a class="tabs__swicher_item active" href="#">Отчеты</a><a class="tabs__swicher_item" href="#">Администраторы</a><a class="tabs__swicher_item" href="#">Биллинг</a><a class="tabs__swicher_item" href="#">Итоги</a></div>
+          <!-- end tabs__swicher -->
+          <!-- begin tabs__content -->
+          <div class="tabs__content">
+            <!-- begin tests__grid-->
+            <div class="content__grid">
+              <!-- begin title row -->
+              <div class="content__grid_title_row">
+                <div class="width__3">
+                  <div class="content__grid_title">Группа, тест</div>
+                </div>
+                <div class="width__3">
+                  <div class="content__grid_title">Индивидуальные отчеты в PDF</div>
+                </div>
+                <div class="width__3">
+                  <div class="content__grid_title">Групповые отчеты в XLS</div>
+                </div>
+              </div>
+              <!-- end title row -->
+              <!-- begin line 1 -->
+              <div class="content__grid_row">
+                <div class="content__grid_first">
+                  <div class="content__grid_border">
+                    Основная группа <br>
+                    PIF 5.5
+                  </div>
+                </div>
+                <div class="content__grid_group">
+                  <div class="content__grid_group-row">
+                    <div class="content__grid_item">
+                      <div class="content__settings_wrap">
+                        <div class="content__settings"><a class="content__settings_toggle" href="#drop1" data-setting-drop="">Настройки</a>
+                          <!-- begin content__settings_drop -->
+                          <div class="content__settings_drop" id="drop1">
+                            <div class="content__settings_drop-title">Показывать:</div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check1"/>
+                              </div>
+                              <label class="form__label" for="check1">итоговый балл</label>
+                            </div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check2"/>
+                              </div>
+                              <label class="form__label" for="check2">данные ЭКОПСИ</label>
+                            </div>
+                            <div class="content__settings_drop-title">Использовать:</div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check3"/>
+                              </div>
+                              <label class="form__label" for="check3">логотип и название клиента
+                                <input type="text" placeholder="укажите название"/>
+                              </label>
+                            </div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check4"/>
+                              </div>
+                              <label class="form__label" for="check4">цвет клиента
+                                <div class="color__pick" style="background-color: #4caf50;"></div>
+                              </label>
+                            </div>
+                          </div>
+                          <!-- end content__settings_drop -->
+                        </div>
+                        <div class="content__grid_label">Для заказчика</div>
+                      </div>
+                      <div class="content__settings_wrap">
+                        <div class="content__settings"><a class="content__settings_toggle" href="#drop4" data-setting-drop="">Настройки</a>
+                          <!-- begin content__settings_drop -->
+                          <div class="content__settings_drop" id="drop4">
+                            <div class="content__settings_drop-title">Показывать:</div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check21"/>
+                              </div>
+                              <label class="form__label" for="check21">итоговый балл</label>
+                            </div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check22"/>
+                              </div>
+                              <label class="form__label" for="check22">данные ЭКОПСИ</label>
+                            </div>
+                            <div class="content__settings_drop-title">Использовать:</div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check23"/>
+                              </div>
+                              <label class="form__label" for="check23">логотип и название клиента
+                                <input type="text" placeholder="укажите название"/>
+                              </label>
+                            </div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check24"/>
+                              </div>
+                              <label class="form__label" for="check24">цвет клиента
+                                <div class="color__pick" style="background-color: #4caf50;"></div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="content__grid_label">Для заказчика</div>
+                      </div>
+                      <div class="content__settings_wrap"><a class="content__settings_add" href="#">Добавить отчет</a></div>
+                    </div>
+                    <div class="content__grid_item">
+                      <div class="content__settings_wrap">
+                        <div class="content__settings"><a class="content__settings_toggle" href="#drop2" data-setting-drop="">Настройки</a>
+                          <!-- begin content__settings_drop -->
+                          <div class="content__settings_drop" id="drop2">
+                            <div class="content__settings_drop-title">Показывать:</div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check11"/>
+                              </div>
+                              <label class="form__label" for="check11">итоговый балл</label>
+                            </div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check12"/>
+                              </div>
+                              <label class="form__label" for="check12">данные ЭКОПСИ</label>
+                            </div>
+                            <div class="content__settings_drop-title">Использовать:</div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check13"/>
+                              </div>
+                              <label class="form__label" for="check13">логотип и название клиента
+                                <input type="text" placeholder="укажите название"/>
+                              </label>
+                            </div>
+                            <div class="form__row">
+                              <div class="form__check">
+                                <input type="checkbox" id="check14"/>
+                              </div>
+                              <label class="form__label" for="check14">цвет клиента
+                                <div class="color__pick" style="background-color: #4caf50;"></div>
+                              </label>
+                            </div>
+                          </div>
+                          <!-- end content__settings_drop -->
+                        </div>
+                        <div class="content__grid_label">Для заказчика</div>
+                      </div>
+                      <div class="content__settings_wrap"><a class="content__settings_add" href="#">Добавить отчет</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- begin tabs__foot -->
+          <div class="tabs__foot">
+            <button class="btn btn__info">← Назад</button>
+            <button class="btn">Далее →</button>
+          </div>
+          <!-- end tabs__foot -->
+        </div>
+      </main>
+      <!-- end main__content -->
+    </div>
+  </body>
+</html>

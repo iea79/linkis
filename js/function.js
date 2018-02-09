@@ -73,8 +73,20 @@ $(document).ready(function() {
    	// gridMatch();
 
    	$('select').select2({
+      minimumResultsForSearch: 10,
+    });
+
+    $('select.add').select2({
    		minimumResultsForSearch: 10,
-   	});
+        placeholder: 'Назначить',
+    });
+
+    $('select.add').on('select2:open', function (e) {
+        var container = $('.select2-container').last().find('.select2-results__options');
+        container.addClass('select2-container__add');
+        $('.js-add-new').remove();
+        container.before('<a href="#" class="js-add-new select2-results__add"><i class="icon__add"></i> Добавить нового</a>');
+    });
 
    	$('.filter__top_toggle').on('click', function(event) {
    		event.preventDefault();
@@ -92,6 +104,13 @@ $(document).ready(function() {
    			$(this).html('Больше фильтров <span class="icon icon__drop"></span>')
    		}
    	});
+
+    $('[data-setting-drop]').on('click', function(event) {
+      event.preventDefault();
+      var dropId = $(this).attr('href');
+      $('.content__settings_drop').not(dropId).removeClass('open')
+      $(dropId).toggleClass('open');
+    });
 
 });
 
