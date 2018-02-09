@@ -36,6 +36,13 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
+	&[disabled] {
+		color: #999;
+		cursor: default;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 .main__content {

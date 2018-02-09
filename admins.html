@@ -125,80 +125,80 @@
           <!-- begin radio__swicher -->
           <div class="radio__swicher">
             <div class="radio__swicher_wrap">
-              <input type="radio" name="swicher" id="group1" checked="checked"/>
-              <label class="radio__swicher_item" for="group1">По группам</label>
-              <input type="radio" name="swicher" id="group2"/>
-              <label class="radio__swicher_item" for="group2">По администраторам</label>
+              <div class="radio__swicher_item active" data-radio-swich="#tab1">По группам</div>
+              <div class="radio__swicher_item" data-radio-swich="#tab2">По администраторам</div>
             </div>
           </div>
           <!-- end radio__swicher -->
-          <!-- begin tabs__content -->
-          <div class="tabs__content">
-            <!-- begin tests__grid-->
-            <div class="content__grid">
-              <!-- begin title row -->
-              <div class="content__grid_title_row">
-                <div class="width__3">
-                  <div class="content__grid_title">Группы</div>
-                </div>
-                <div class="width__3">
-                  <div class="content__grid_title">Тесты</div>
-                </div>
-                <div class="width__3">
-                  <div class="content__grid_title">Администраторы</div>
-                </div>
-              </div>
-              <!-- end title row -->
-              <!-- begin line 1 -->
-              <div class="content__grid_row">
-                <div class="content__grid_first">
-                  <div class="content__grid_label">Основная</div>
-                </div>
-                <div class="content__grid_group">
-                  <div class="content__grid_group-row">
-                    <div class="content__grid_item">
-                      <div class="form__field_wrap">
-                        <div class="content__grid_sublink">ЭКОПСИ →</div>
-                        <div class="content__grid_label">PIF LA</div>
-                      </div>
-                    </div>
-                    <div class="content__grid_item">
-                      <div class="form__field_wrap">
-                        <div class="content__grid_sublink"><a href="#">Права</a></div>
-                        <div class="form__field">
-                          <select class="add" name="" disabled="disabled">
-                            <optgroup label="ЭКОПСИ">
-                              <option value="">Шатров Юрий</option>
-                              <option value="">Павел Безручко</option>
-                            </optgroup>
-                            <optgroup label="Клиент">
-                              <option value="">Греф Станислав</option>
-                              <option value="Константин Константинопо" selected="selected">Константин Константинопо</option>
-                            </optgroup>
-                          </select>
-                        </div><a class="content__grid_action" href="#">Добавить</a>
-                      </div>
-                    </div>
+          <div class="radio__swicher_target active" id="tab1">
+            <!-- begin tabs__content -->
+            <div class="tabs__content">
+              <!-- begin tests__grid-->
+              <div class="content__grid">
+                <!-- begin title row -->
+                <div class="content__grid_title_row">
+                  <div class="width__3">
+                    <div class="content__grid_title">Группы</div>
                   </div>
-                  <div class="content__grid_group-row">
-                    <div class="content__grid_item">
-                      <div class="form__field_wrap">
-                        <div class="content__grid_label">PIF 5.5</div>
+                  <div class="width__3">
+                    <div class="content__grid_title">Тесты</div>
+                  </div>
+                  <div class="width__3">
+                    <div class="content__grid_title">Администраторы</div>
+                  </div>
+                </div>
+                <!-- end title row -->
+                <!-- begin line 1 -->
+                <div class="content__grid_row">
+                  <div class="content__grid_first">
+                    <div class="content__grid_label">Основная</div>
+                  </div>
+                  <div class="content__grid_group">
+                    <div class="content__grid_group-row">
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap">
+                          <div class="content__grid_sublink">ЭКОПСИ →</div>
+                          <div class="content__grid_label">PIF LA</div>
+                        </div>
+                      </div>
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap">
+                          <div class="content__grid_sublink"><a href="#">Права</a></div>
+                          <div class="form__field">
+                            <select class="add" name="" disabled="disabled">
+                              <optgroup label="ЭКОПСИ">
+                                <option value="">Шатров Юрий</option>
+                                <option value="">Павел Безручко</option>
+                              </optgroup>
+                              <optgroup label="Клиент">
+                                <option value="">Греф Станислав</option>
+                                <option value="Константин Константинопо" selected="selected">Константин Константинопо</option>
+                              </optgroup>
+                            </select>
+                          </div><a class="content__grid_action" href="#">Добавить</a>
+                        </div>
                       </div>
                     </div>
-                    <div class="content__grid_item">
-                      <div class="form__field_wrap">
-                        <div class="content__grid_sublink"><a href="#">Права</a></div>
-                        <div class="form__field">
-                          <select class="add" name="">
-                            <optgroup label="ЭКОПСИ">
-                              <option value="Шатров Юрий">Шатров Юрий</option>
-                              <option value="Павел Безручко">Павел Безручко</option>
-                            </optgroup>
-                            <optgroup label="Клиент">
-                              <option value="Греф Станислав">Греф Станислав</option>
-                            </optgroup>
-                          </select>
+                    <div class="content__grid_group-row">
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap">
+                          <div class="content__grid_label">PIF 5.5</div>
+                        </div>
+                      </div>
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap">
+                          <div class="content__grid_sublink"><a href="#">Права</a></div>
+                          <div class="form__field">
+                            <select class="add" name="">
+                              <optgroup label="ЭКОПСИ">
+                                <option value="Шатров Юрий">Шатров Юрий</option>
+                                <option value="Павел Безручко">Павел Безручко</option>
+                              </optgroup>
+                              <optgroup label="Клиент">
+                                <option value="Греф Станислав">Греф Станислав</option>
+                              </optgroup>
+                            </select>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -206,13 +206,111 @@
                 </div>
               </div>
             </div>
+            <!-- begin tabs__foot -->
+            <div class="tabs__foot">
+              <button class="btn btn__info">← Назад</button>
+              <button class="btn">Далее →</button>
+            </div>
+            <!-- end tabs__foot -->
           </div>
-          <!-- begin tabs__foot -->
-          <div class="tabs__foot">
-            <button class="btn btn__info">← Назад</button>
-            <button class="btn">Далее →</button>
+          <div class="radio__swicher_target" id="tab2">
+            <!-- begin tabs__content -->
+            <div class="tabs__content">
+              <!-- begin tests__grid-->
+              <div class="content__grid">
+                <!-- begin title row -->
+                <div class="content__grid_title_row">
+                  <div class="width__3">
+                    <div class="content__grid_title">Администраторы</div>
+                  </div>
+                  <div class="width__3">
+                    <div class="content__grid_title">Тесты</div>
+                  </div>
+                  <div class="width__3">
+                    <div class="content__grid_title">Группы</div>
+                  </div>
+                </div>
+                <!-- end title row -->
+                <!-- begin line 1 -->
+                <div class="content__grid_row">
+                  <div class="content__grid_first">
+                    <div class="content__grid_label">Шатров Юрий</div>
+                    <div class="content__grid_label-sub">ЭКОПСИ</div>
+                  </div>
+                  <div class="content__grid_group">
+                    <div class="content__grid_group-row">
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap form__field_wrap-inline">
+                          <div class="form__check">
+                            <input type="checkbox" id=""/>
+                            <label class="form__label" for="">Сбертех</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap form__field_wrap-inline">
+                          <div class="form__check">
+                            <input type="checkbox" id=""/>
+                            <label class="form__label" for="">PIF 5.5</label>
+                          </div>
+                          <div class="content__grid_sublink"> <a href="#">Права</a></div>
+                        </div>
+                        <div class="form__field_wrap form__field_wrap-inline">
+                          <div class="form__check">
+                            <input type="checkbox" id=""/>
+                            <label class="form__label" for="">PIF LA</label>
+                          </div>
+                          <div class="content__grid_sublink"> <a href="#">Права</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content__grid_group-row">
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap form__field_wrap-inline">
+                          <div class="form__check">
+                            <input type="checkbox" id=""/>
+                            <label class="form__label" for="">Сберлизинг</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content__grid_item">
+                        <div class="form__field_wrap form__field_wrap-inline">
+                          <div class="form__check">
+                            <input type="checkbox" id="" disabled="disabled"/>
+                            <label class="form__label" for="">PIF 5.5</label>
+                          </div>
+                          <div class="content__grid_sublink"><a href="" disabled="disabled">Права</a></div>
+                        </div>
+                        <div class="form__field_wrap form__field_wrap-inline">
+                          <div class="form__check">
+                            <input type="checkbox" id="" disabled="disabled"/>
+                            <label class="form__label" for="">PIF LA</label>
+                          </div>
+                          <div class="content__grid_sublink"><a href="" disabled="disabled">Права</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content__grid_row content__grid_row--bordtop">
+                  <div class="form__field width__3">
+                    <select name="">
+                      <option value=""></option>
+                      <option value="Item 1">Item 1</option>
+                      <option value="Item 2">Item 2</option>
+                      <option value="Item 3">Item 3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- begin tabs__foot -->
+            <div class="tabs__foot">
+              <button class="btn btn__info">← Назад</button>
+              <button class="btn">Далее →</button>
+            </div>
+            <!-- end tabs__foot -->
           </div>
-          <!-- end tabs__foot -->
         </div>
       </main>
       <!-- end main__content -->

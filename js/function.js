@@ -44,7 +44,11 @@ $(document).ready(function() {
 
 
 	// Reset link whte attribute href="#"
-	$('[href*="#"]').click(function(event) {
+  $('[href*="#"]').click(function(event) {
+    event.preventDefault();
+  });
+
+	$('a[disabled]').click(function(event) {
 		event.preventDefault();
 	});
 
@@ -73,11 +77,12 @@ $(document).ready(function() {
    	// gridMatch();
 
    	$('select').select2({
-      minimumResultsForSearch: 10,
+        minimumResultsForSearch: 10,
+        placeholder: 'Назначить',
     });
 
     $('select.add').select2({
-   		minimumResultsForSearch: 10,
+        minimumResultsForSearch: 10,
         placeholder: 'Назначить',
     });
 
@@ -110,6 +115,18 @@ $(document).ready(function() {
       var dropId = $(this).attr('href');
       $('.content__settings_drop').not(dropId).removeClass('open')
       $(dropId).toggleClass('open');
+    });
+
+    $('body').on('click', '[data-radio-swich]', function(event) {
+      event.preventDefault();
+      var elId = $(this).data('radioSwich');
+
+      $('[data-radio-swich]').removeClass('active');
+      $(this).addClass('active');
+
+      $('.radio__swicher_target').removeClass('active');
+      $(elId).addClass('active')
+
     });
 
 });

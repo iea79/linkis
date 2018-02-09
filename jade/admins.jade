@@ -25,72 +25,151 @@ block content
 		// begin radio__swicher 
 		.radio__swicher
 			.radio__swicher_wrap
-				input(type="radio" name="swicher" id="group1" checked)
-				label.radio__swicher_item(for="group1") По группам
-				input(type="radio" name="swicher" id="group2")
-				label.radio__swicher_item(for="group2") По администраторам
+				.radio__swicher_item.active(data-radio-swich="#tab1") По группам
+				.radio__swicher_item(data-radio-swich="#tab2") По администраторам
 		// end radio__swicher 
 
-		// begin tabs__content 
-		.tabs__content
+		.radio__swicher_target.active#tab1
+			// begin tabs__content 
+			.tabs__content
 
-			// begin tests__grid
-			.content__grid
-				// begin title row 
-				.content__grid_title_row
-					.width__3
-						.content__grid_title Группы
-					.width__3
-						.content__grid_title Тесты
-					.width__3
-						.content__grid_title Администраторы
-					
-				// end title row 
+				// begin tests__grid
+				.content__grid
+					// begin title row 
+					.content__grid_title_row
+						.width__3
+							.content__grid_title Группы
+						.width__3
+							.content__grid_title Тесты
+						.width__3
+							.content__grid_title Администраторы
+						
+					// end title row 
 
-				// begin line 1 
-				.content__grid_row
-					.content__grid_first
-						.content__grid_label Основная
-					.content__grid_group
-						.content__grid_group-row
-							.content__grid_item
-								.form__field_wrap
-									.content__grid_sublink ЭКОПСИ →
-									.content__grid_label PIF LA
-								
-							.content__grid_item
-								.form__field_wrap
-									.content__grid_sublink
-										a(href="#") Права
-									.form__field
-										select.add(name="" disabled)
-											optgroup(label="ЭКОПСИ")
-												option(value="") Шатров Юрий
-												option(value="") Павел Безручко
-											optgroup(label="Клиент")
-												option(value="") Греф Станислав
-												option(value="Константин Константинопо" selected) Константин Константинопо
+					// begin line 1 
+					.content__grid_row
+						.content__grid_first
+							.content__grid_label Основная
+						.content__grid_group
+							.content__grid_group-row
+								.content__grid_item
+									.form__field_wrap
+										.content__grid_sublink ЭКОПСИ →
+										.content__grid_label PIF LA
+									
+								.content__grid_item
+									.form__field_wrap
+										.content__grid_sublink
+											a(href="#") Права
+										.form__field
+											select.add(name="" disabled)
+												optgroup(label="ЭКОПСИ")
+													option(value="") Шатров Юрий
+													option(value="") Павел Безручко
+												optgroup(label="Клиент")
+													option(value="") Греф Станислав
+													option(value="Константин Константинопо" selected) Константин Константинопо
 
-									a(href="#").content__grid_action Добавить
-						.content__grid_group-row
-							.content__grid_item
-								.form__field_wrap
-									.content__grid_label PIF 5.5
-								
-							.content__grid_item
-								.form__field_wrap
-									.content__grid_sublink
-										a(href="#") Права
-									.form__field
-										select.add(name="")
-											optgroup(label="ЭКОПСИ")
-												option(value="Шатров Юрий") Шатров Юрий
-												option(value="Павел Безручко") Павел Безручко
-											optgroup(label="Клиент")
-												option(value="Греф Станислав") Греф Станислав
+										a(href="#").content__grid_action Добавить
+							.content__grid_group-row
+								.content__grid_item
+									.form__field_wrap
+										.content__grid_label PIF 5.5
+									
+								.content__grid_item
+									.form__field_wrap
+										.content__grid_sublink
+											a(href="#") Права
+										.form__field
+											select.add(name="")
+												optgroup(label="ЭКОПСИ")
+													option(value="Шатров Юрий") Шатров Юрий
+													option(value="Павел Безручко") Павел Безручко
+												optgroup(label="Клиент")
+													option(value="Греф Станислав") Греф Станислав
 
-		// begin tabs__foot 
-		.tabs__foot
-			button.btn.btn__info ← Назад
-			button.btn Далее →
-		// end tabs__foot 
+			// begin tabs__foot 
+			.tabs__foot
+				button.btn.btn__info ← Назад
+				button.btn Далее →
+			// end tabs__foot 
+
+		.radio__swicher_target#tab2
+			// begin tabs__content 
+			.tabs__content
+
+				// begin tests__grid
+				.content__grid
+					// begin title row 
+					.content__grid_title_row
+						.width__3
+							.content__grid_title Администраторы
+						.width__3
+							.content__grid_title Тесты
+						.width__3
+							.content__grid_title Группы
+						
+					// end title row 
+
+					// begin line 1 
+					.content__grid_row
+						.content__grid_first
+							.content__grid_label Шатров Юрий
+							.content__grid_label-sub ЭКОПСИ
+						.content__grid_group
+							.content__grid_group-row
+								.content__grid_item
+									.form__field_wrap.form__field_wrap-inline
+										.form__check
+											input(type="checkbox" id="")
+											label.form__label(for="") Сбертех
+									
+								.content__grid_item
+									.form__field_wrap.form__field_wrap-inline
+										.form__check
+											input(type="checkbox" id="")
+											label.form__label(for="") PIF 5.5
+										.content__grid_sublink 
+											a(href="#") Права
+									.form__field_wrap.form__field_wrap-inline
+										.form__check
+											input(type="checkbox" id="")
+											label.form__label(for="") PIF LA
+										.content__grid_sublink 
+											a(href="#") Права
+
+							.content__grid_group-row
+								.content__grid_item
+									.form__field_wrap.form__field_wrap-inline
+										.form__check
+											input(type="checkbox" id="")
+											label.form__label(for="") Сберлизинг
+									
+								.content__grid_item
+									.form__field_wrap.form__field_wrap-inline
+										.form__check
+											input(type="checkbox" id="" disabled)
+											label.form__label(for="") PIF 5.5
+										.content__grid_sublink
+											a(href="" disabled) Права
+									.form__field_wrap.form__field_wrap-inline
+										.form__check
+											input(type="checkbox" id="" disabled)
+											label.form__label(for="") PIF LA
+										.content__grid_sublink
+											a(href="" disabled) Права
+						
+					.content__grid_row.content__grid_row--bordtop
+						.form__field.width__3
+							select(name="")
+								option(value="")
+								option(value="Item 1") Item 1
+								option(value="Item 2") Item 2
+								option(value="Item 3") Item 3
+
+			// begin tabs__foot 
+			.tabs__foot
+				button.btn.btn__info ← Назад
+				button.btn Далее →
+			// end tabs__foot 
+

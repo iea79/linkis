@@ -1125,6 +1125,11 @@ a {
   cursor: pointer; }
   a:hover {
     text-decoration: underline; }
+  a[disabled] {
+    color: #999;
+    cursor: default; }
+    a[disabled]:hover {
+      text-decoration: none; }
 
 .main__content {
   overflow: hidden;
@@ -1476,6 +1481,8 @@ a {
   .form__check + .form__label, .form__radio + .form__label {
     overflow: hidden;
     display: block; }
+  .form__check input[disabled] + .form__label, .form__radio input[disabled] + .form__label {
+    color: #999999; }
 
 .form__field.dots {
   position: relative; }
@@ -1493,6 +1500,14 @@ a {
     .form__field.dots .icon:hover {
       text-decoration: none;
       color: gray; }
+
+.form__field_wrap-inline > div, .form__field_wrap-inline > label {
+  display: inline-block !important;
+  float: none;
+  vertical-align: middle; }
+
+.form__field_wrap-inline .form__label {
+  min-width: 80px; }
 
 .form__date {
   display: inline-block; }
@@ -1529,8 +1544,12 @@ a {
 .radio__swicher {
   text-align: center;
   margin: 20px 0 17px; }
-  .radio__swicher + .tabs__content {
-    margin-top: 0; }
+  .radio__swicher + .radio__swicher_target {
+    margin-top: -19px; }
+  .radio__swicher_target {
+    display: none; }
+    .radio__swicher_target.active {
+      display: block; }
   .radio__swicher_wrap {
     display: inline-block;
     padding: 9px 7px;
@@ -1572,12 +1591,12 @@ a {
         -webkit-transition: right .3s;
         -o-transition: right .3s;
         transition: right .3s; }
-  .radio__swicher input {
-    display: none; }
-    .radio__swicher input:checked + label {
+    .radio__swicher_item.active {
       color: #27ae60; }
-      .radio__swicher input:checked + label:first-of-type:after {
-        right: 44px; }
+    .radio__swicher_item:first-child:after {
+      right: 0; }
+    .radio__swicher_item:first-child.active:after {
+      right: 44px; }
 
 .content__grid {
   margin-top: -7px;
@@ -1607,12 +1626,25 @@ a {
       float: left; }
     .content__grid_row + .content__grid_row {
       margin-top: 30px; }
+    .content__grid_row--bordtop {
+      position: relative;
+      padding-top: 20px; }
+      .content__grid_row--bordtop:before {
+        content: '';
+        display: block;
+        border-top: 1px dashed #d2d2d2;
+        position: absolute;
+        top: 0px;
+        left: 60px;
+        right: 0; }
   .content__grid_first {
     width: 33.3%;
     float: left; }
   .content__grid_label {
     overflow: hidden;
     line-height: 30px; }
+    .content__grid_label-sub {
+      color: #999; }
   .content__grid_action {
     font-size: 13px;
     margin-top: 5px;
