@@ -1,0 +1,242 @@
+
+.content {
+	&__grid {
+		margin-top: -7px;
+		margin-left: -30px;
+		margin-bottom: -10px;
+		min-height: 280px;
+		> div {
+			padding-left: 30px;
+			// float: left;
+		}
+		&_title {
+			border-bottom: 1px dashed #d2d2d2;
+			padding-bottom: 6px;
+			font-weight: 600;
+			font-size: 15px;
+			// margin-bottom: 0px;
+			&_row {
+				margin-left: -30px;
+				margin-bottom: 20px;
+				@extend %clear_a;
+				>div {
+					float: left;
+					padding-left: 30px;
+				}
+			}
+		}
+		&_row {
+			@extend %clear_a;
+			// width: 100%;
+			float: none;
+			display: block;
+			margin-left: -30px;
+			margin-bottom: 20px;
+			> div {
+				padding-left: 30px;
+				float: left;
+			}
+			+ .content__grid_row {
+				margin-top: 30px;
+			}
+			&--bordtop {
+				position: relative;
+				padding-top: 20px;
+				&:before {
+					content: '';
+					display: block;
+					border-top: 1px dashed #d2d2d2;
+					// margin-bottom: 20px;
+					position: absolute;
+					top: 0px;
+					left: 60px;
+					right: 0;
+				}
+			}
+		}
+		&_first {
+			width: 33.3%;
+			float: left;
+		}
+		&_label {
+			overflow: hidden;
+			line-height: 30px;
+			&-sub {
+				color: #999;
+			}
+		}
+		&_action {
+			font-size: 13px;
+			margin-top: 5px;
+			display: inline-block;
+			+ .content__grid_action {
+				margin-left: 5px;
+			}
+		}
+		&_group {
+			width: 66.6%;
+			float: left;
+			&-row {
+				margin-left: -30px;
+				@extend %clear_a;
+				+.content__grid_group-row {
+					position: relative;
+					padding-top: 21px;
+					&:before {
+						content: '';
+						position: absolute;
+						border-top: 1px dashed #d2d2d2;
+						left: 30px;
+						right: 0;
+						top: 0;
+					}
+				}
+			}
+		}
+		&_item {
+			padding-left: 30px;
+			float: left;
+			width: 50%;
+			padding-bottom: 27px;
+			position: relative;
+			.content__grid_action {
+				position: absolute;
+			}
+		}
+		&_sublink {
+			float: right;
+			margin-left: 10px;
+			color: #999999;
+			line-height: 30px;
+			font-size: 15px;
+			a {
+				font-size: 13px;
+			}
+		}
+		.icon {
+			float: right;
+			&__remove {
+				cursor: pointer;
+				transition: all .3s;
+				margin-top: 7px;
+				margin-left: 10px;
+				margin-right: 0;
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+		.form {
+			&__field {
+				overflow: hidden;
+				&_wrap {
+					+.form__field_wrap {
+						margin-top: 10px;
+					}
+				}
+				.select2-container {
+					width: 100% !important;
+					.select2-selection--single {
+						height: 30px;
+						.select2-selection__rendered {
+							line-height: 29px;
+						}
+						.select2-selection__arrow {
+							height: 29px;
+							b {
+								height: 29px;
+							}
+						}
+					}
+				}
+			}
+		}
+		&_border {
+			border: 1px dashed #d2d2d2;
+			background-color: #ffffff;
+			padding: 6px 13px;
+			margin-top: 11px;
+			font-size: 17px;
+			color: #666666;
+			line-height: 24px;
+		}
+	}
+	&__settings {
+		&_wrap {
+			position: relative;
+			+.content__settings_wrap {
+				margin-top: 8px;
+				display: block;
+			}
+		}
+		&_toggle {
+			float: right;
+			font-size: 13px;
+			// margin-top: 9px;
+		}
+		&_drop {
+			position: absolute;
+			display: none;
+			width: 263px;
+			padding: 12px 15px;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+			// border: 1px solid #c9c9c9;
+			background-color: #ffffff;
+			color: #000;
+			line-height: 1;
+			right: 0;
+			top: 30px;
+			font-size: 13px;
+			z-index: 20;
+			&-lg {
+				width: 410px;
+				font-size: 17px;
+			}
+			&.open {
+				display: block;
+			}
+			&-title {
+				font-weight: 600;
+				margin-bottom: 10px;
+			}
+			.form__row {
+				+ .form__row {
+					margin-top: 8px;
+				}
+				+.content__settings_drop-title {
+					margin-top: 20px;
+				}
+				.form__label {
+					&:before {
+						display: none;
+					}
+					input {
+						margin-top: 2px;
+						margin-bottom: 7px;
+						padding: 2px 5px;
+						width: 100%;
+					}
+				}
+				.form__check {
+					margin-top: 1px;
+					float: left;
+				}
+			}
+		}
+		&_add {
+			line-height: 30px;
+			&:before {
+				content: url('../img/add.svg');
+				margin-right: 9px;
+				display: inline-block;
+				vertical-align: sub;
+				transition: all .3s;
+			}
+			&:hover {
+				&:before {
+					opacity: .8;
+				}
+			}
+		}
+	}
+}

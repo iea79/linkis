@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Project</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=1024"/>
+    <link href="css/style.css?0.1" rel="stylesheet"/>
+    <link href="css/select2.css?0.1" rel="stylesheet"/>
+    <!-- Удалить modal.js и tab.js если подключен bootstrap-->
+    <script src="js/jquery.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/tab.js"></script>
+    <script src="js/function.js?0.1"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header-->
+      <header class="header"><a class="header__logo"><img src="img/logo.png"/></a>
+        <!-- begin header__user -->
+        <div class="header__user">
+          <div class="header__user_ava">
+            <div class="header__user_ava-img"><img src="img/avatar.png" alt=""/></div>
+          </div>
+          <div class="header__user_name">Гурбангулы <br>Бердымухаммедов</div>
+          <div class="header__user_action"><span class="icon icon__logout"></span></div>
+        </div>
+        <!-- end header__user -->
+        <!-- begin navbar -->
+        <ul class="header__nav">
+          <li><a>ПРОЕКТЫ</a></li>
+          <li><a>ДОКУМЕНТАЦИЯ</a></li>
+          <li><a>НАСТРОЙКИ</a></li>
+          <li><a>БИБЛИОТЕКА</a></li>
+          <li><a>ПОИСК</a></li>
+        </ul>
+        <!-- end navbar -->
+      </header>
+      <!-- end header-->
+      <!-- begin title_box-->
+      <div class="title__box">
+        <div class="title__box_wrap">
+          <div class="title__box_left">
+            <!-- begin breadcrumb -->
+            <ul class="breadcrumb">
+              <li><a href="#">Проекты</a></li>
+              <li><a class="active" href="#">Добавление проекта</a></li>
+            </ul>
+            <!-- end breadcrumb -->Добавление проекта
+          </div>
+          <div class="title__box_right"><img src="img/sberbank.png" alt=""/></div>
+        </div>
+      </div>
+      <!-- end title_box-->
+      <!-- begin aside-->
+      <aside class="sidebar">
+        <div class="sidebar__wrap">
+          <div class="sidebar__content">
+            <div class="sidebar__title">Типы</div>
+            <ul class="sidebar__list">
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch1"/>
+                </div>
+                <label class="form__label" for="ch1">Опрос 360°</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch2"/>
+                </div>
+                <label class="form__label" for="ch2">Линейный опрос</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch3"/>
+                </div>
+                <label class="form__label" for="ch3">Тестирование</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch4"/>
+                </div>
+                <label class="form__label" for="ch4">Workflow</label>
+              </li>
+              <li>
+                <div class="form__check">
+                  <input type="checkbox" id="ch5"/>
+                </div>
+                <label class="form__label" for="ch5">Realtime Feedback</label>
+              </li>
+            </ul>
+            <div class="sidebar__title">Состав</div>
+            <ul class="sidebar__list">
+              <li>
+                <div class="form__radio">
+                  <input type="radio" id="rd1" name="sostav"/>
+                </div>
+                <label class="form__label" for="rd1">Все</label>
+              </li>
+              <li>
+                <div class="form__radio">
+                  <input type="radio" id="rd2" name="sostav"/>
+                </div>
+                <label class="form__label" for="rd2">Все кроме архивных</label>
+              </li>
+              <li>
+                <div class="form__radio">
+                  <input type="radio" id="rd3" name="sostav"/>
+                </div>
+                <label class="form__label" for="rd3">Архивные</label>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <!-- end aside-->
+      <!-- begin main__content-->
+      <main class="main__content">
+        <div class="content__wrap">
+          <!-- begin tabs__swicher -->
+          <div class="tabs__swicher">
+            <div class="tabs__swicher_item">Настройки</div>
+            <div class="tabs__swicher_item">Тесты и нормы</div>
+            <div class="tabs__swicher_item">Отчеты</div>
+            <div class="tabs__swicher_item">Администраторы</div>
+            <div class="tabs__swicher_item">Биллинг</div>
+            <div class="tabs__swicher_item active">Итоги</div>
+          </div>
+          <!-- end tabs__swicher -->
+          <!-- begin tabs__content -->
+          <div class="tabs__content summary">
+            <div class="summary__section">
+              <div class="summary__title"> <span>Общие настройки</span></div>
+              <p>Вы добавляете проект типа «Тестирование» для клиента Сбербанк. <br></p>Менеджер проекта — Константин Константинопольский.
+            </div>
+            <div class="summary__section">
+              <div class="summary__title"> <span>Тесты и нормы</span></div>
+              <p>В проект добавлено 2 теста – PIF 5.5, PIF LA. Для каждого теста выбраны нормы.</p>
+            </div>
+            <div class="summary__section">
+              <div class="summary__title"> <span>Отчеты</span></div>
+              <p>Вы выбрали индивидуальные и групповые отчёты для каждого теста.</p>
+            </div>
+            <div class="summary__section">
+              <div class="summary__title"> <span>Администраторы</span></div>
+              <p>В проект добавлено 12 администраторов.</p>
+            </div>
+            <div class="summary__section">
+              <div class="summary__title attention"> <span>Биллинг</span></div>
+              <p>Вы не настроили биллинг для части тестов. Вы можете создать проект, не добавляя биллинг, или <a href="#">назначить биллинг группам</a></p>
+            </div>
+          </div>
+          <!-- end tabs__content -->
+          <!-- begin tabs__foot -->
+          <div class="tabs__foot">
+            <button class="btn btn__info">← Назад</button>
+            <button class="btn btn__warning">Создать проект</button>
+          </div>
+          <!-- end tabs__foot -->
+        </div>
+      </main>
+      <!-- end main__content -->
+    </div>
+  </body>
+</html>

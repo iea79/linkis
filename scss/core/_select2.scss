@@ -1,0 +1,38 @@
+.select2 {
+	&-container--default {
+		.select2-container__add {
+			.select2-results {
+				&__option {
+					font-size: 16px;
+					// display: block;
+					.select2-results__option {
+						padding: 4px 10px 4px 37px;
+
+					}
+				}
+				&__group {
+					font-size: 16px;
+					padding: 8px 16px 2px;
+					display: block;
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	&-results {
+		&__add {
+			font-size: 17px;
+			display: block;
+			padding: 8px 14px 5px;
+			border-bottom: 1px solid #e9e9e9;
+			&:before {
+				content: url('../img/add.svg');
+				display: inline-block;
+				vertical-align: text-top;
+				margin-right: 4px;
+			}
+		}
+	}
+}
+

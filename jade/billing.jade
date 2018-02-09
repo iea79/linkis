@@ -1,0 +1,182 @@
+extends template.jade
+
+block breadcrumb
+	li
+		a(href="#") Проекты
+	li
+		a(href="#" class="active") Добавление проекта
+
+block titlepage
+	|Добавление проекта
+
+block content
+	.content__wrap
+		// begin tabs__swicher 
+		.tabs__swicher
+			a(href="#").tabs__swicher_item Настройки
+			a(href="#").tabs__swicher_item Тесты и нормы
+			a(href="#").tabs__swicher_item Отчеты
+			a(href="#").tabs__swicher_item Администраторы
+			a(href="#").tabs__swicher_item.active Биллинг
+			a(href="#").tabs__swicher_item Итоги
+
+		// end tabs__swicher 
+
+		// begin tabs__content 
+		.tabs__content
+
+			// begin tests__grid
+			.content__grid
+				// begin title row 
+				.content__grid_title_row
+					.width__3
+						.content__grid_title Группа
+					.width__3
+						.content__grid_title Тесты
+					.width__3
+						.content__grid_title Биллинг
+					
+				// end title row 
+
+				// begin line 1 
+				.content__grid_row
+					.content__grid_first
+						.content__grid_label Сбертех
+					.content__grid_group
+						.content__grid_group-row
+							.content__grid_item
+								.form__field_wrap
+									.content__grid_label PIF LA
+								.form__field_wrap
+									.content__grid_label PIF 5.5
+
+							.content__grid_item
+								.form__field_wrap
+									.content__grid_sublink
+										a(href="#drop1" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop.content__settings_drop-lg#drop1
+											.form__row.form__row_strok
+												.form__field
+													.content__settings_drop-title Билинг, ед.
+												.form__label
+													.content__settings_drop-title Администратор
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="202")
+												.form__label Константин Константинопольский
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="207")
+												.form__label Евгений Кондратьев
+											.form__row.form__row_strok.form__row_total
+												.form__field 103
+												.form__label Осталось распределить 
+
+										// end content__settings_drop 
+
+									.form__field.form__field-inline
+										input(type="text")
+										.form__field-inline_label единиц
+								.form__field_wrap
+									.content__grid_sublink
+										a(href="#drop2" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop.content__settings_drop-lg#drop2
+											.form__row.form__row_strok
+												.form__field
+													.content__settings_drop-title Билинг, ед.
+												.form__label
+													.content__settings_drop-title Администратор
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="202")
+												.form__label Константин Константинопольский
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="207")
+												.form__label Евгений Кондратьев
+											.form__row.form__row_strok.form__row_total
+												.form__field 103
+												.form__label Осталось распределить 
+
+										// end content__settings_drop 
+									.form__field.form__field-inline
+										input(type="text")
+										.form__field-inline_label единиц
+				// end line 1 
+
+				// begin line 2 
+				.content__grid_row.content__grid_row--bordtop
+					.content__grid_first
+						.content__grid_label Сберлизинг
+					.content__grid_group
+						.content__grid_group-row
+							.content__grid_item
+								.form__field_wrap
+									.content__grid_label PIF LA
+								.form__field_wrap
+									.content__grid_label PIF 5.5
+
+							.content__grid_item
+								.form__field_wrap
+									.content__grid_sublink
+										a(href="#drop3" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop.content__settings_drop-lg#drop3
+											.form__row.form__row_strok
+												.form__field
+													.content__settings_drop-title Билинг, ед.
+												.form__label
+													.content__settings_drop-title Администратор
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="202")
+												.form__label Константин Константинопольский
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="207")
+												.form__label Евгений Кондратьев
+											.form__row.form__row_strok.form__row_total
+												.form__field 103
+												.form__label Осталось распределить 
+
+										// end content__settings_drop 
+									.form__field.form__field-inline
+										input(type="text")
+										.form__field-inline_label единиц
+								.form__field_wrap
+									.content__grid_sublink
+										a(href="#drop4" data-setting-drop="").content__settings_toggle Настройки
+										// begin content__settings_drop 
+										.content__settings_drop.content__settings_drop-lg#drop4
+											.form__row.form__row_strok
+												.form__field
+													.content__settings_drop-title Билинг, ед.
+												.form__label
+													.content__settings_drop-title Администратор
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="202")
+												.form__label Константин Константинопольский
+											.form__row.form__row_strok
+												.form__field
+													input(type="text", value="207")
+												.form__label Евгений Кондратьев
+											.form__row.form__row_strok.form__row_total
+												.form__field 103
+												.form__label Осталось распределить 
+
+										// end content__settings_drop 
+									.form__field.form__field-inline
+										input(type="text")
+										.form__field-inline_label единиц
+				// end line 2
+
+		// begin tabs__foot 
+		.tabs__foot
+			button.btn.btn__info ← Назад
+			button.btn Далее →
+		// end tabs__foot 
+
+

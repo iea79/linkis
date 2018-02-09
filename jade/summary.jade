@@ -1,0 +1,57 @@
+extends template.jade
+
+block breadcrumb
+	li
+		a(href="#") Проекты
+	li
+		a(href="#" class="active") Добавление проекта
+
+block titlepage
+	|Добавление проекта
+
+block content
+	.content__wrap
+		// begin tabs__swicher 
+		.tabs__swicher
+			.tabs__swicher_item Настройки
+			.tabs__swicher_item Тесты и нормы
+			.tabs__swicher_item Отчеты
+			.tabs__swicher_item Администраторы
+			.tabs__swicher_item Биллинг
+			.tabs__swicher_item.active Итоги
+			
+		// end tabs__swicher 
+
+		// begin tabs__content 
+		.tabs__content.summary
+			.summary__section
+				.summary__title 
+					span Общие настройки
+				p Вы добавляете проект типа «Тестирование» для клиента Сбербанк. <br>
+				|Менеджер проекта — Константин Константинопольский.
+			.summary__section
+				.summary__title 
+					span Тесты и нормы
+				p В проект добавлено 2 теста – PIF 5.5, PIF LA. Для каждого теста выбраны нормы.
+			.summary__section
+				.summary__title 
+					span Отчеты
+				p Вы выбрали индивидуальные и групповые отчёты для каждого теста.
+			.summary__section
+				.summary__title 
+					span Администраторы
+				p В проект добавлено 12 администраторов.
+			.summary__section
+				.summary__title.attention 
+					span Биллинг
+				p Вы не настроили биллинг для части тестов. Вы можете создать проект, не добавляя биллинг, или 
+					a(href="#") назначить биллинг группам
+			
+
+		// end tabs__content 
+
+		// begin tabs__foot 
+		.tabs__foot
+			button.btn.btn__info ← Назад
+			button.btn.btn__warning Создать проект
+		// end tabs__foot 

@@ -151,7 +151,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 	border-radius: 3px;
 	@include trs(0.3);
 	&:hover {
-		background-color: darken($btn_default_bg_color, 8%);
+		background-color: darken($btn_default_bg_color, 6%);
 		text-decoration: none;
 	}
 	@each $status_el, $color_bg in $el_colors {
@@ -159,7 +159,7 @@ input[type=checkbox]:disabled:indeterminate:before {
 			background-color: $color_bg;
 			color: $btn_contrast_text_color;
 			&:hover {
-				background-color: darken($color_bg, 10%);
+				background-color: darken($color_bg, 6%);
 			}
 		}
 	}
@@ -168,3 +168,141 @@ input[type=checkbox]:disabled:indeterminate:before {
 		color: $main_color;
 	}	
 }
+
+
+.form {
+	&__row {
+		@extend %clear_a;
+		+ .form__row {
+			margin-top: 28px;
+		}
+		&_strok {
+			.form {
+				&__label {
+					overflow: hidden;
+					display: block;
+					line-height: 28px;
+				}
+				&__field {
+					width: 105px;
+					text-align: right;
+					float: right;
+					line-height: 27px;
+					// margin-left: 20px;
+					input {
+						width: 59px;
+						text-align: right;
+						padding: 0px 8px;
+					}
+				}
+			}
+			.content__settings_drop-title {
+				font-size: 15px;
+				line-height: 1;
+				margin-bottom: 8px;
+			}
+			+ .form__row {
+				margin-top: 2px !important;
+				&_total {
+					margin-top: 10px !important;
+				}
+			}
+		}
+		&_total {
+			font-weight: 600;
+			border-top: 1px solid #e9e9e9;
+			box-sizing: content-box;
+			padding: 9px 15px 0px;
+			margin-left: -15px;
+			margin-right: -15px;
+		}
+	}
+	&__label {
+		display: inline-block;
+	}
+	&__check,&__radio {
+		float: left;
+		margin-right: 8px;
+		+ .form__label {
+			overflow: hidden;
+			display: block;
+		}
+		input {
+			&[disabled] {
+				+ .form__label {
+					color: #999999;
+				}
+			}
+		}
+	}
+	&__check {
+
+	}
+	&__radio {
+
+	}
+	&__field {
+		&.dots {
+			position: relative;
+			input {
+				padding-right: 30px;
+			}
+			.icon {
+				position: absolute;
+				right: 3px;
+				top: 0;
+				cursor: pointer;
+				color: #000;
+				transition: color 0.3s;
+				&:hover {
+					text-decoration: none;
+					color: lighten(#000, 50%);
+				}
+			}		
+		}
+		&_wrap {
+			&-inline {
+				> div,> label {
+					display: inline-block !important;
+					float: none;
+					vertical-align: middle;
+				}
+				.form {
+					&__label {
+						min-width: 80px;
+					}
+				}
+			}
+		}
+		&-inline {
+			input {
+				width: 69px;
+				display: inline-block;
+				vertical-align: middle;
+			}
+			&_label {
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 15px;
+				margin-left: 5px;
+			}
+		}
+		&-strok {
+		}
+	}
+	&__date {
+		display: inline-block;
+	}
+	&__stacked {
+		.form {
+			&__label {
+				float: left;
+				width: 90px;
+			}
+			&__field {
+				overflow: hidden;
+			}
+		}
+	}
+}
+
