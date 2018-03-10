@@ -78,4 +78,9 @@
 			content: url('../img/delete.svg');
 		}
 	}
+	&__quest {
+		&:before {
+			content: url('../img/question.png');
+		}
+	}
 }

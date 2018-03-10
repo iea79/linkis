@@ -76,7 +76,7 @@ $(document).ready(function() {
    	// setGridMatch($('[data-grid-match] .grid__item'));
    	// gridMatch();
 
-   	$('select').select2({
+    $('select').select2({
         minimumResultsForSearch: 10,
         placeholder: 'Назначить',
     });
@@ -91,6 +91,12 @@ $(document).ready(function() {
         container.addClass('select2-container__add');
         $('.js-add-new').remove();
         container.before('<a href="#" class="js-add-new select2-results__add"><i class="icon__add"></i> Добавить нового</a>');
+    });
+
+    $('select.select-lg').on('select2:open', function (e) {
+        var container = $('.select2-container').last();
+        $(this).addClass('select2-container__lg');
+        container.addClass('select2-container__lg');
     });
 
    	$('.filter__top_toggle').on('click', function(event) {
@@ -127,6 +133,36 @@ $(document).ready(function() {
       $('.radio__swicher_target').removeClass('active');
       $(elId).addClass('active')
 
+    });
+
+    $('.tooltip').tooltipster({
+        contentCloning: true,
+        contentAsHTML: true,
+        interactive: true,
+        side: 'bottom',
+        trigger: 'custom',
+        triggerOpen: {
+            click: true,
+            tap: true
+        },
+        triggerClose: {
+            click: true,
+            tap: true
+        },
+        // functionPosition: function(instance, helper, position){
+        //     // position.coord.top += 10;
+        //     position.coord.right += 40;
+        //     position.coord.left += 40;
+        //     return position;
+        // }
+    });
+
+    $('.form__add input').on('blur', function() {
+        if ($(this).val() != '') {
+            $(this).addClass('valid');
+        } else {
+            $(this).removeClass('valid')
+        }
     });
 
 });

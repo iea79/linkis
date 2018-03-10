@@ -6,7 +6,7 @@
 //  Skype: ivanov_ea
 //  ==========================
  */
-.grid:after, .form__row:after, .nav-tabs:after, .main__content:after, .header:after, .title__box:after, .radio__swicher_wrap:after, .content__grid_title_row:after, .content__grid_row:after, .content__grid_group-row:after, .summary__title:after {
+.grid:after, .form__row:after, .nav-tabs:after, .main__content:after, .header:after, .title__box:after, .radio__swicher_wrap:after, .content__grid_title_row:after, .content__grid_row:after, .content__grid_group-row:after, .summary__title:after, .modal__add .modal-header:after {
   content: '';
   display: table;
   clear: both; }
@@ -833,7 +833,7 @@ input[type=checkbox]:disabled:indeterminate:before {
     padding-left: 20px;
     margin-bottom: 20px; }
     .grid > div.width_1 {
-      width: 50%; }
+      width: 100%; }
     .grid > div.width_2 {
       width: 50%; }
     .grid > div.width_3 {
@@ -1379,6 +1379,8 @@ a {
     transform: rotate(180deg); }
   .icon__remove:before {
     content: url("../img/delete.svg"); }
+  .icon__quest:before {
+    content: url("../img/question.png"); }
 
 /* Aside
 -------------------------------------------------------------------------------*/
@@ -1587,6 +1589,20 @@ a {
     display: inline-block;
     vertical-align: text-top;
     margin-right: 4px; }
+
+.select2-container__lg.select2-container--open .select2-selection--single {
+  border: 1px solid #3bac67; }
+
+.select2-container__lg .select2-dropdown {
+  border: 1px solid #3bac67; }
+
+.select2-container__lg .select2-results__option {
+  padding: 14px 21px;
+  font-size: 16px;
+  color: #111111; }
+  .select2-container__lg .select2-results__option--highlighted[aria-selected] {
+    background-color: #c9ffde;
+    color: #111111; }
 
 .radio__swicher {
   text-align: center;
@@ -1871,17 +1887,252 @@ a {
       display: block;
       border-bottom: 1px dotted #d2d2d2;
       z-index: 0; }
-  .summary_h:after {
-    content: '';
-    height: 1px;
-    margin-left: 20px;
-    overflow: hidden;
-    border-top: 1px dashed #d2d2d2; }
   .summary p {
     line-height: 1.3;
     margin: 0; }
 
 /* Footer
  ----------------------------------------------------------------------------- */
+.modal__add {
+  font-size: 16px;
+  line-height: 24px;
+  color: #111111; }
+  .modal__add .modal-dialog {
+    max-width: 840px; }
+  .modal__add .modal-content {
+    border-radius: 0;
+    padding: 34px 40px; }
+  .modal__add .modal-close {
+    z-index: 10;
+    color: #999;
+    top: 37px;
+    right: 41px; }
+  .modal__add .modal-header {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 37px; }
+  .modal__add .modal-title {
+    font-size: 24px;
+    float: left;
+    position: relative;
+    padding-bottom: 14px;
+    color: #111;
+    width: 100%; }
+    .modal__add .modal-title:after {
+      content: '';
+      width: 61px;
+      border-top: 4px solid;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+  .modal__add .modal-footer {
+    background-color: #f2f2f2;
+    padding: 40px;
+    border-top: 0;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    margin-left: -40px;
+    margin-right: -40px;
+    text-align: left; }
+  .modal__add .btn {
+    padding: 16px;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 180px;
+    font-weight: 700;
+    margin-right: 17px;
+    border-radius: 0; }
+    .modal__add .btn__info {
+      background-color: #dddddd; }
+      .modal__add .btn__info:hover {
+        background-color: #cecece; }
+
+.form__add {
+  margin-top: 76px;
+  margin-bottom: 76px; }
+  .form__add .grid__wrapper {
+    margin-bottom: 37px; }
+  .form__add .form__field {
+    position: relative; }
+    .form__add .form__field label {
+      position: absolute;
+      font-size: 16px;
+      color: #666;
+      top: 14px;
+      left: 10px;
+      z-index: 2;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      cursor: text; }
+    .form__add .form__field input:not([type]),
+    .form__add .form__field input[type=text],
+    .form__add .form__field input[type=password],
+    .form__add .form__field input[type=email],
+    .form__add .form__field input[type=url],
+    .form__add .form__field input[type=search],
+    .form__add .form__field input[type=tel],
+    .form__add .form__field input[type=number],
+    .form__add .form__field input[type=datetime],
+    .form__add .form__field textarea {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      font-size: 16px;
+      padding: 14px 10px;
+      border: 1px solid #cccccc;
+      border-radius: 0; }
+      .form__add .form__field input:not([type]):focus + label,
+      .form__add .form__field input[type=text]:focus + label,
+      .form__add .form__field input[type=password]:focus + label,
+      .form__add .form__field input[type=email]:focus + label,
+      .form__add .form__field input[type=url]:focus + label,
+      .form__add .form__field input[type=search]:focus + label,
+      .form__add .form__field input[type=tel]:focus + label,
+      .form__add .form__field input[type=number]:focus + label,
+      .form__add .form__field input[type=datetime]:focus + label,
+      .form__add .form__field textarea:focus + label {
+        top: -22px;
+        left: 0;
+        font-size: 12px; }
+      .form__add .form__field input:not([type]).valid + label,
+      .form__add .form__field input[type=text].valid + label,
+      .form__add .form__field input[type=password].valid + label,
+      .form__add .form__field input[type=email].valid + label,
+      .form__add .form__field input[type=url].valid + label,
+      .form__add .form__field input[type=search].valid + label,
+      .form__add .form__field input[type=tel].valid + label,
+      .form__add .form__field input[type=number].valid + label,
+      .form__add .form__field input[type=datetime].valid + label,
+      .form__add .form__field textarea.valid + label {
+        top: -22px;
+        left: 0;
+        font-size: 12px; }
+      .form__add .form__field input:not([type]).invalid,
+      .form__add .form__field input[type=text].invalid,
+      .form__add .form__field input[type=password].invalid,
+      .form__add .form__field input[type=email].invalid,
+      .form__add .form__field input[type=url].invalid,
+      .form__add .form__field input[type=search].invalid,
+      .form__add .form__field input[type=tel].invalid,
+      .form__add .form__field input[type=number].invalid,
+      .form__add .form__field input[type=datetime].invalid,
+      .form__add .form__field textarea.invalid {
+        border-color: #20a052; }
+        .form__add .form__field input:not([type]).invalid + label,
+        .form__add .form__field input[type=text].invalid + label,
+        .form__add .form__field input[type=password].invalid + label,
+        .form__add .form__field input[type=email].invalid + label,
+        .form__add .form__field input[type=url].invalid + label,
+        .form__add .form__field input[type=search].invalid + label,
+        .form__add .form__field input[type=tel].invalid + label,
+        .form__add .form__field input[type=number].invalid + label,
+        .form__add .form__field input[type=datetime].invalid + label,
+        .form__add .form__field textarea.invalid + label {
+          color: #20a052; }
+      .form__add .form__field input:not([type])::-webkit-input-placeholder,
+      .form__add .form__field input[type=text]::-webkit-input-placeholder,
+      .form__add .form__field input[type=password]::-webkit-input-placeholder,
+      .form__add .form__field input[type=email]::-webkit-input-placeholder,
+      .form__add .form__field input[type=url]::-webkit-input-placeholder,
+      .form__add .form__field input[type=search]::-webkit-input-placeholder,
+      .form__add .form__field input[type=tel]::-webkit-input-placeholder,
+      .form__add .form__field input[type=number]::-webkit-input-placeholder,
+      .form__add .form__field input[type=datetime]::-webkit-input-placeholder,
+      .form__add .form__field textarea::-webkit-input-placeholder {
+        color: #666;
+        font-size: 16px; }
+      .form__add .form__field input:not([type]):-moz-placeholder,
+      .form__add .form__field input[type=text]:-moz-placeholder,
+      .form__add .form__field input[type=password]:-moz-placeholder,
+      .form__add .form__field input[type=email]:-moz-placeholder,
+      .form__add .form__field input[type=url]:-moz-placeholder,
+      .form__add .form__field input[type=search]:-moz-placeholder,
+      .form__add .form__field input[type=tel]:-moz-placeholder,
+      .form__add .form__field input[type=number]:-moz-placeholder,
+      .form__add .form__field input[type=datetime]:-moz-placeholder,
+      .form__add .form__field textarea:-moz-placeholder {
+        color: #666;
+        font-size: 16px; }
+      .form__add .form__field input:not([type])::-moz-placeholder,
+      .form__add .form__field input[type=text]::-moz-placeholder,
+      .form__add .form__field input[type=password]::-moz-placeholder,
+      .form__add .form__field input[type=email]::-moz-placeholder,
+      .form__add .form__field input[type=url]::-moz-placeholder,
+      .form__add .form__field input[type=search]::-moz-placeholder,
+      .form__add .form__field input[type=tel]::-moz-placeholder,
+      .form__add .form__field input[type=number]::-moz-placeholder,
+      .form__add .form__field input[type=datetime]::-moz-placeholder,
+      .form__add .form__field textarea::-moz-placeholder {
+        color: #666;
+        font-size: 16px; }
+      .form__add .form__field input:not([type]):-ms-input-placeholder,
+      .form__add .form__field input[type=text]:-ms-input-placeholder,
+      .form__add .form__field input[type=password]:-ms-input-placeholder,
+      .form__add .form__field input[type=email]:-ms-input-placeholder,
+      .form__add .form__field input[type=url]:-ms-input-placeholder,
+      .form__add .form__field input[type=search]:-ms-input-placeholder,
+      .form__add .form__field input[type=tel]:-ms-input-placeholder,
+      .form__add .form__field input[type=number]:-ms-input-placeholder,
+      .form__add .form__field input[type=datetime]:-ms-input-placeholder,
+      .form__add .form__field textarea:-ms-input-placeholder {
+        color: #666;
+        font-size: 16px; }
+    .form__add .form__field .icon__quest {
+      position: absolute;
+      z-index: 2;
+      right: 10px;
+      top: 14px; }
+    .form__add .form__field .red {
+      color: #20a052; }
+  .form__add .form__check {
+    float: none;
+    margin-bottom: 16px; }
+  .form__add .form__select_wrap {
+    overflow: hidden; }
+  .form__add .form__select .icon__quest {
+    float: right;
+    margin-left: 10px;
+    margin-top: 14px; }
+  .form__add [type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border: 1px solid #b8b8b8;
+    background-color: #ffffff;
+    margin-right: 8px; }
+    .form__add [type="checkbox"] + label {
+      color: #666666; }
+    .form__add [type="checkbox"]:checked:before, .form__add [type="checkbox"]:indeterminate:before {
+      content: url("../img/checkmark.png");
+      line-height: 26px;
+      margin-left: 1px; }
+    .form__add [type="checkbox"]:checked + label, .form__add [type="checkbox"]:indeterminate + label {
+      color: #111; }
+  .form__add .icon__quest {
+    display: inline-block;
+    vertical-align: text-top;
+    margin-left: 6px; }
+  .form__add .select2-container {
+    width: 100% !important; }
+    .form__add .select2-container.select2-container--open .select2-selection--single {
+      border: 1px solid #3bac67; }
+    .form__add .select2-container.select2-container--open.select2-container--below .select2-selection--single {
+      border-bottom: 0; }
+    .form__add .select2-container.select2-container--open.select2-container--above .select2-selection--single {
+      border: 1px solid #3bac67;
+      border-top: 0; }
+  .form__add .select2 .select2-selection--single {
+    height: 46px;
+    padding: 10px 10px;
+    border: 1px solid #cccccc;
+    border-radius: 0; }
+  .form__add .select2 .select2-selection__placeholder {
+    color: #27ae60; }
+  .form__add .select2 .select2-selection__arrow {
+    height: 46px; }
+    .form__add .select2 .select2-selection__arrow b {
+      height: 46px;
+      background-image: url(../img/caret-down--2.png); }
 
 /*# sourceMappingURL=style.css.map */

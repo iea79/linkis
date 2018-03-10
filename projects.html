@@ -6,13 +6,15 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=1024"/>
-    <link href="css/style.css?0.1" rel="stylesheet"/>
     <link href="css/select2.css?0.1" rel="stylesheet"/>
+    <link href="css/tooltipster.bundle.css?0.1" rel="stylesheet"/>
+    <link href="css/style.css?0.1" rel="stylesheet"/>
     <!-- Удалить modal.js и tab.js если подключен bootstrap-->
     <script src="js/jquery.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/tab.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/function.js?0.1"></script>
   </head>
   <body>
@@ -186,7 +188,7 @@
             </div>
           </div>
         </div>
-        <div class="add__project"><a class="btn" href="#">Добавить проект</a></div>
+        <div class="add__project"><a class="btn" href="#" data-toggle="modal" data-target="#modal__add">Добавить проект</a></div>
         <!-- begin table -->
         <table class="table table__projects">
           <thead>
@@ -295,6 +297,137 @@
           </tbody>
         </table>
         <!-- end table -->
+        <!-- begin Modal modal__add -->
+        <div class="modal fade modal__add" id="modal__add">
+          <div class="modal-dialog">
+            <div class="modal-content"><a class="modal-close" href="#" data-dismiss="modal"></a>
+              <div class="modal-header">
+                <div class="modal-title" id="myModalLabel">Добавление тестируемого</div>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body__title">Банкротство, учитывая отсутствие в законе норм</div>
+                <p>Страховая сумма гарантирует Кодекс. Причиненный ущерб, в согласии с традиционными представлениями, использует юридический договор. </p>
+                <p>В отличие от решений судов, имеющих обязательную силу, регистрация латентно вознаграждает товарный кредит. Указ статистических наблюдений, реквизирует закон, хотя законодательством может быть установлено иное. </p>
+                <div class="form form__add">
+                  <!-- begin grid_add-->
+                  <div class="grid grid__3 grid_add">
+                    <div class="grid__wrapper">
+                      <div class="form__field form__field_icon">
+                        <!-- При ошибке можно добавить класс invalid-->
+                        <input type="text" id="f1" placeholder=""/>
+                        <label for="f1">Фамилия <span class="red">*</span></label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f2" placeholder=""/>
+                        <label for="f2">Имя <span class="red">*</span></label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f3" placeholder=""/>
+                        <label for="f3">Отчество <span class="red">*</span></label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f4" placeholder=""/>
+                        <label for="f4">Телефон </label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f5" placeholder=""/>
+                        <label for="f5">Город </label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f6" placeholder=""/>
+                        <label for="f6">Адрес </label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper width_2">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f7" placeholder=""/>
+                        <label for="f7">E-mail </label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper width_2">
+                      <div class="form__field form__field_icon">
+                        <input type="text" id="f8" placeholder=""/>
+                        <label for="f8">Должность </label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper width_1">
+                      <div class="form__check form__field_icon">
+                        <input type="checkbox" id="ch1"/>
+                        <label for="ch1">Опрос 360°</label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                      <div class="form__check form__field_icon">
+                        <input type="checkbox" id="ch2"/>
+                        <label for="ch2">Линейный опрос</label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                      <div class="form__check form__field_icon">
+                        <input type="checkbox" id="ch3"/>
+                        <label for="ch3">Тестирование</label><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper width_1">
+                      <div class="form__select form__field_icon width__3"><i class="icon__quest tooltip" title="&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.&lt;/p&gt; &lt;a href=''&gt; Lorem ipsum dolor.&lt;/a&gt;"></i>
+                        <div class="form__select_wrap">
+                          <select class="select-lg" name="" data-placeholder="Выбрать">
+                            <option value=""> </option>
+                            <option value="Русский">Русский</option>
+                            <option value="Китайский">Китайский</option>
+                            <option value="Корейский">Корейский</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper width_1">
+                      <!-- begin -->
+                      <div class="grid grid__3">
+                        <div class="grid__wrapper">
+                          <div class="form__select form__field_icon">
+                            <div class="form__select_wrap">
+                              <select class="select-lg" name="" data-placeholder="Выбрать">
+                                <option value=""> </option>
+                                <option value="Русский">Русский</option>
+                                <option value="Китайский">Китайский</option>
+                                <option value="Корейский">Корейский</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="grid__wrapper">
+                          <div class="form__select form__field_icon">
+                            <div class="form__select_wrap">
+                              <select class="select-lg" name="" data-placeholder="Выбрать">
+                                <option value=""> </option>
+                                <option value="Русский">Русский</option>
+                                <option value="Китайский">Китайский</option>
+                                <option value="Корейский">Корейский</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end -->
+                    </div>
+                  </div>
+                  <!-- end grid_add-->
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button class="btn">Добавить</button>
+                <button class="btn btn__info">Отмена</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end modal modal__add -->
       </main>
       <!-- end main__content -->
     </div>

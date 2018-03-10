@@ -59,3 +59,253 @@
 // 	}
 // }
 
+.fade {}
+.modal__add {
+	font-size: 16px;
+	line-height: 24px;
+	color: #111111;
+	.modal {
+		&-dialog {
+			max-width: 840px;
+		}
+		&-content {
+			border-radius: 0;
+			padding: 34px 40px;
+		}
+		&-close {
+			z-index: 10;
+			color: #999;
+			top: 37px;
+			right: 41px;
+		}
+		&-header {
+			@extend %clear_a;
+			margin-top: 0;
+			padding: 0;
+			margin-bottom: 37px;
+		}
+		&-title {
+			font-size: 24px;
+			float: left;
+			position: relative;
+			padding-bottom: 14px;
+			color: #111;
+			width: 100%;
+			&:after {
+				content: '';
+				width: 61px;
+				border-top: 4px solid;
+				display: block;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		&-body {}
+		&-footer {
+			background-color: #f2f2f2;
+			padding: 40px;
+			border-top: 0;
+			box-sizing: content-box;
+			margin-left: -40px;
+			margin-right: -40px;
+			text-align: left;
+		}
+	}
+	.btn {
+		padding: 16px;
+		font-size: 18px;
+		text-transform: uppercase;
+		width: 180px;
+		font-weight: 700;
+		margin-right: 17px;
+		border-radius: 0;
+		&__info {
+			background-color: #dddddd;
+			&:hover {
+				background-color: darken(#dddddd, 6%);
+			}
+		}
+	}
+}
+.modal-body__title {}
+.form {
+	&__add {
+		margin-top: 76px;
+		margin-bottom: 76px;
+		.grid__wrapper {
+			margin-bottom: 37px;
+		}
+		.form {
+			&__field {
+				position: relative;
+				label {
+					position: absolute;
+					font-size: 16px;
+					color: #666;
+					top: 14px;
+					left: 10px;
+					z-index: 2;
+					transition: all 0.3s;
+					cursor: text;
+				}
+				input:not([type]),
+				input[type=text],
+				input[type=password],
+				input[type=email],
+				input[type=url],
+				input[type=search],
+				input[type=tel],
+				input[type=number],
+				input[type=datetime], 
+				textarea {
+					position: relative;
+					z-index: 1;
+					width: 100%;
+					font-size: 16px;
+					padding: 14px 10px;
+					border: 1px solid #cccccc;
+					border-radius: 0;
+					&:focus {
+						+ label {
+							top: -22px;
+							left: 0;
+							font-size: 12px;
+						}
+					}
+					&.valid {
+						+ label {
+							top: -22px;
+							left: 0;
+							font-size: 12px;
+						}
+					}
+					&.invalid {
+						border-color: #20a052;
+						+ label {
+							color: #20a052;
+						}
+					}
+					@include placeholder {
+						color: #666;
+						font-size: 16px;
+					}
+				}
+				&_icon {
+				}
+				.icon__quest {
+					position: absolute;
+					z-index: 2;
+					right: 10px;
+					top: 14px;
+				}
+				.red {
+					color: #20a052;
+				}
+			}
+			&__check {
+				float: none;
+				margin-bottom: 16px;
+			}
+			&__select {
+				&_wrap {
+					overflow: hidden;
+				}
+				.icon__quest {
+					float: right;
+					margin-left: 10px;
+					margin-top: 14px;
+				}
+			}
+		}
+		[type="checkbox"] {
+			width: 24px;
+			height: 24px;
+			border: 1px solid #b8b8b8;
+			background-color: #ffffff;
+			margin-right: 8px;
+			+ label {
+				color: #666666;
+			}
+			&:checked,&:indeterminate {
+				&:before {
+					content: url('../img/checkmark.png');
+					line-height: 26px;
+					margin-left: 1px;
+				}
+				+ label {
+					color: #111;
+				}
+			}
+		}
+		.icon__quest {
+			display: inline-block;
+			vertical-align: text-top;
+			margin-left: 6px;
+		}
+		.select2 {
+			&-container {
+				width: 100% !important;
+				&.select2-container--open {
+					.select2 {
+						&-selection {
+							&--single {
+								border: 1px solid #3bac67;
+							}
+						}
+					}
+					&.select2-container--below {
+						.select2 {
+							&-selection {
+								&--single {
+									border-bottom: 0;
+								}
+							}
+						}
+					}
+					&.select2-container--above {
+						.select2 {
+							&-selection {
+								&--single {
+									border: 1px solid #3bac67;
+									border-top: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+			.select2 {
+				&-selection {
+					&--single {
+						height: 46px;
+						padding: 10px 10px;
+						border: 1px solid #cccccc;
+						border-radius: 0;
+					}
+					&__placeholder {
+						color: #27ae60;
+					}
+					&__arrow {
+						height: 46px;
+						b {
+							height: 46px;
+							background-image: url(../img/caret-down--2.png);
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.grid {}
+.grid__3 {}
+.grid_add {}
+.grid__wrapper {}
+.red {}
+.icon__quest {}
+.tooltip {}
+.width_2 {}
+.modal-footer {}
+.btn {}
+.btn__info {}

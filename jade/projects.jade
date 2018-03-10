@@ -67,7 +67,7 @@ block content
 						a.filter__bottom_clear Очистить
 
 	.add__project
-		a.btn(href="#") Добавить проект
+		a.btn(href="#" data-toggle="modal" data-target="#modal__add") Добавить проект
 
 	// begin table 
 	table.table.table__projects
@@ -159,3 +159,112 @@ block content
 				td 80
 
 	// end table 
+
+	// begin Modal modal__add 
+	.modal.fade.modal__add#modal__add
+		.modal-dialog
+			.modal-content
+				a(href="#" class="modal-close" data-dismiss="modal")
+				.modal-header
+					.modal-title#myModalLabel Добавление тестируемого
+				.modal-body
+					.modal-body__title Банкротство, учитывая отсутствие в законе норм
+					p Страховая сумма гарантирует Кодекс. Причиненный ущерб, в согласии с традиционными представлениями, использует юридический договор. 
+					p В отличие от решений судов, имеющих обязательную силу, регистрация латентно вознаграждает товарный кредит. Указ статистических наблюдений, реквизирует закон, хотя законодательством может быть установлено иное. 
+
+					.form.form__add
+						// begin grid_add
+						.grid.grid__3.grid_add
+							.grid__wrapper
+								.form__field.form__field_icon
+									// При ошибке можно добавить класс invalid
+									input(type="text" id="f1" placeholder="")
+									label(for="f1") Фамилия 
+										span.red *
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper
+								.form__field.form__field_icon
+									input(type="text" id="f2" placeholder="")
+									label(for="f2") Имя 
+										span.red *
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper
+								.form__field.form__field_icon
+									input(type="text" id="f3" placeholder="")
+									label(for="f3") Отчество 
+										span.red *
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper
+								.form__field.form__field_icon
+									input(type="text" id="f4" placeholder="")
+									label(for="f4") Телефон 
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper
+								.form__field.form__field_icon
+									input(type="text" id="f5" placeholder="")
+									label(for="f5") Город 
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper
+								.form__field.form__field_icon
+									input(type="text" id="f6" placeholder="")
+									label(for="f6") Адрес 
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper.width_2
+								.form__field.form__field_icon
+									input(type="text" id="f7" placeholder="")
+									label(for="f7") E-mail 
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper.width_2
+								.form__field.form__field_icon
+									input(type="text" id="f8" placeholder="")
+									label(for="f8") Должность 
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper.width_1
+								.form__check.form__field_icon
+									input(type="checkbox" id="ch1")
+									label(for="ch1") Опрос 360°
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+								.form__check.form__field_icon
+									input(type="checkbox" id="ch2")
+									label(for="ch2") Линейный опрос
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+								.form__check.form__field_icon
+									input(type="checkbox" id="ch3")
+									label(for="ch3") Тестирование
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+							.grid__wrapper.width_1
+								.form__select.form__field_icon.width__3
+									i.icon__quest.tooltip(title="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis iusto veniam reiciendis, cupiditate voluptatibus similique culpa quisquam quam, nemo natus commodi architecto consequuntur, earum voluptates harum sapiente nam ea! Rerum.</p> <a href=''> Lorem ipsum dolor.</a>")
+									.form__select_wrap
+										select.select-lg(name="" data-placeholder="Выбрать")
+											option(value="") 
+											option(value="Русский") Русский
+											option(value="Китайский") Китайский
+											option(value="Корейский") Корейский
+							.grid__wrapper.width_1
+								// begin 
+								.grid.grid__3
+									.grid__wrapper
+										.form__select.form__field_icon
+											.form__select_wrap
+												select.select-lg(name="" data-placeholder="Выбрать")
+													option(value="") 
+													option(value="Русский") Русский
+													option(value="Китайский") Китайский
+													option(value="Корейский") Корейский
+									.grid__wrapper
+										.form__select.form__field_icon
+											.form__select_wrap
+												select.select-lg(name="" data-placeholder="Выбрать")
+													option(value="") 
+													option(value="Русский") Русский
+													option(value="Китайский") Китайский
+													option(value="Корейский") Корейский
+								// end 
+								
+						// end grid_add
+						
+				.modal-footer
+					button.btn Добавить
+					button.btn.btn__info Отмена
+	// end modal modal__add 

@@ -34,5 +34,35 @@
 			}
 		}
 	}
+
+	&-container__lg {
+		&.select2 {
+			&-container {
+				&--open {
+					.select2 {
+						&-selection {
+							&--single {
+								border: 1px solid #3bac67;
+							}
+						}
+					}
+				}
+			}
+		}
+		.select2 {
+			&-dropdown {
+				border: 1px solid #3bac67;
+			}
+		}
+		.select2-results__option {
+			padding: 14px 21px;
+			font-size: 16px;
+			color: #111111;
+			&--highlighted[aria-selected] {
+				background-color: #c9ffde;
+				color: #111111;
+			}
+		}
+	}
 }
 
